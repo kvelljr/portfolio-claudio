@@ -13,17 +13,15 @@ export default function CasePage({ caso }: { caso: Case }) {
   return (
     <div>
       {/* Cover image */}
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          maxHeight: "500px",
-          height: "50vw",
-          overflow: "hidden",
-          backgroundColor: "#F5F5F3",
-        }}
-      >
-        <Image src={caso.cover} alt={caso.title} fill style={{ objectFit: "cover" }} priority />
+      <div style={{ overflow: "hidden", maxHeight: "500px", lineHeight: 0, backgroundColor: "#F5F5F3" }}>
+        <Image
+          src={caso.cover}
+          alt={caso.title}
+          width={1200}
+          height={630}
+          style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", maxHeight: "500px" }}
+          priority
+        />
       </div>
 
       {/* Content */}

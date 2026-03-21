@@ -28,13 +28,16 @@ export default function CaseCard({ caso }: { caso: Case }) {
         }}
       >
         {/* Cover image */}
-        <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden" }}>
+        <div style={{ overflow: "hidden", lineHeight: 0 }}>
           <Image
             src={caso.cover}
             alt={caso.title}
-            fill
+            width={800}
+            height={450}
             style={{
-              objectFit: "cover",
+              width: "100%",
+              height: "auto",
+              display: "block",
               transform: hovered ? "scale(1.02)" : "scale(1)",
               transition: "transform 0.3s ease",
             }}

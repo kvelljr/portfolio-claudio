@@ -28,7 +28,6 @@ export default function Home() {
           {/* Foto */}
           <div
             style={{
-              position: "relative",
               width: "280px",
               height: "280px",
               borderRadius: "20px",
@@ -40,8 +39,9 @@ export default function Home() {
             <Image
               src="/claudio-souza.png"
               alt="Claudio Souza — Product Designer"
-              fill
-              style={{ objectFit: "cover", objectPosition: "top" }}
+              width={280}
+              height={280}
+              style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }}
               priority
             />
           </div>
