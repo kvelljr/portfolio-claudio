@@ -9,8 +9,8 @@ export default function Nav() {
         position: "sticky",
         top: 0,
         zIndex: 50,
-        borderBottom: "1px solid #1F1F1F",
-        backgroundColor: "rgba(10, 10, 10, 0.85)",
+        borderBottom: "1px solid #E5E5E3",
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
         backdropFilter: "blur(12px)",
       }}
     >
@@ -28,10 +28,17 @@ export default function Nav() {
         <Link
           href="/"
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
-            fontWeight: 800,
-            fontSize: "20px",
-            color: "#E5FF4A",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "36px",
+            height: "36px",
+            backgroundColor: "#E5FF4A",
+            borderRadius: "8px",
+            fontFamily: "var(--font-inter), sans-serif",
+            fontWeight: 700,
+            fontSize: "14px",
+            color: "#111111",
             textDecoration: "none",
             letterSpacing: "-0.02em",
           }}
@@ -41,35 +48,54 @@ export default function Nav() {
 
         <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
           <NavLink href="/">trabalhos</NavLink>
-          <NavLink href="/sobre">sobre</NavLink>
+          <Link
+            href="https://linkedin.com/in/claudiojuniorkv"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              backgroundColor: "#111111",
+              color: "#FFFFFF",
+              fontFamily: "var(--font-inter), sans-serif",
+              fontSize: "13px",
+              fontWeight: 500,
+              padding: "7px 16px",
+              borderRadius: "100px",
+              textDecoration: "none",
+              transition: "background-color 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              ;(e.currentTarget as HTMLElement).style.backgroundColor = "#333333"
+            }}
+            onMouseLeave={(e) => {
+              ;(e.currentTarget as HTMLElement).style.backgroundColor = "#111111"
+            }}
+          >
+            Contato
+          </Link>
         </div>
       </div>
     </nav>
   )
 }
 
-function NavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Link
       href={href}
       style={{
-        fontFamily: "var(--font-dm-sans), sans-serif",
+        fontFamily: "var(--font-inter), sans-serif",
         fontSize: "14px",
-        color: "#888888",
+        color: "#777777",
         textDecoration: "none",
         transition: "color 0.2s ease",
       }}
       onMouseEnter={(e) => {
-        ;(e.target as HTMLElement).style.color = "#F5F5F5"
+        ;(e.target as HTMLElement).style.color = "#111111"
       }}
       onMouseLeave={(e) => {
-        ;(e.target as HTMLElement).style.color = "#888888"
+        ;(e.target as HTMLElement).style.color = "#777777"
       }}
     >
       {children}

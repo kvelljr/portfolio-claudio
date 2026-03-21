@@ -20,57 +20,42 @@ export default function CasePage({ caso }: { caso: Case }) {
           maxHeight: "500px",
           height: "50vw",
           overflow: "hidden",
-          backgroundColor: "#111111",
+          backgroundColor: "#F5F5F3",
         }}
       >
-        <Image
-          src={caso.cover}
-          alt={caso.title}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-        />
+        <Image src={caso.cover} alt={caso.title} fill style={{ objectFit: "cover" }} priority />
       </div>
 
       {/* Content */}
-      <div
-        style={{
-          maxWidth: "860px",
-          margin: "0 auto",
-          padding: "0 24px",
-        }}
-      >
+      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 24px" }}>
+
         {/* Breadcrumb */}
         <div style={{ paddingTop: "40px", marginBottom: "32px" }}>
           <Link
             href="/"
             style={{
-              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontFamily: "var(--font-inter), sans-serif",
               fontSize: "14px",
-              color: "#888888",
+              color: "#AAAAAA",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
-            onMouseEnter={(e) => {
-              ;(e.target as HTMLElement).style.color = "#F5F5F5"
-            }}
-            onMouseLeave={(e) => {
-              ;(e.target as HTMLElement).style.color = "#888888"
-            }}
+            onMouseEnter={(e) => { ;(e.target as HTMLElement).style.color = "#111111" }}
+            onMouseLeave={(e) => { ;(e.target as HTMLElement).style.color = "#AAAAAA" }}
           >
             ← Trabalhos
           </Link>
         </div>
 
-        {/* Title block */}
+        {/* Title */}
         <h1
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
-            fontWeight: 800,
+            fontFamily: "var(--font-inter), sans-serif",
+            fontWeight: 700,
             fontSize: "clamp(28px, 5vw, 48px)",
-            color: "#F5F5F5",
-            lineHeight: "1.1",
-            letterSpacing: "-0.03em",
+            color: "#111111",
+            lineHeight: "1.15",
+            letterSpacing: "-0.02em",
             margin: "0 0 16px",
           }}
         >
@@ -78,9 +63,9 @@ export default function CasePage({ caso }: { caso: Case }) {
         </h1>
         <p
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             fontSize: "18px",
-            color: "#888888",
+            color: "#666666",
             lineHeight: "1.6",
             margin: "0 0 48px",
           }}
@@ -95,10 +80,10 @@ export default function CasePage({ caso }: { caso: Case }) {
             gridTemplateColumns: "repeat(4, 1fr)",
             gap: "24px",
             marginBottom: "48px",
-            padding: "32px",
-            backgroundColor: "#111111",
-            border: "1px solid #1F1F1F",
-            borderRadius: "12px",
+            padding: "28px",
+            backgroundColor: "#F7F7F5",
+            border: "1px solid #E5E5E3",
+            borderRadius: "16px",
           }}
         >
           <MetaItem label="Empresa" value={caso.empresa} />
@@ -109,45 +94,36 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         <Divider />
 
-        {/* Contexto */}
         <Section label="Contexto">
           <p style={bodyStyle}>{caso.contexto}</p>
         </Section>
 
         <Divider />
 
-        {/* Problema */}
         <Section label="O problema">
           <p style={bodyStyle}>{caso.problema}</p>
         </Section>
 
         <Divider />
 
-        {/* Processo */}
         <Section label="Processo">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "20px",
-            }}
-          >
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px" }}>
             {caso.processo.map((p) => (
               <div
                 key={p.numero}
                 style={{
-                  backgroundColor: "#111111",
-                  border: "1px solid #1F1F1F",
-                  borderRadius: "8px",
+                  backgroundColor: "#F7F7F5",
+                  border: "1px solid #E5E5E3",
+                  borderRadius: "12px",
                   padding: "24px",
                 }}
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-syne), sans-serif",
-                    fontWeight: 800,
-                    fontSize: "32px",
-                    color: "#E5FF4A",
+                    fontFamily: "var(--font-inter), sans-serif",
+                    fontWeight: 700,
+                    fontSize: "28px",
+                    color: "#CCCCCC",
                     display: "block",
                     lineHeight: "1",
                     marginBottom: "12px",
@@ -155,26 +131,10 @@ export default function CasePage({ caso }: { caso: Case }) {
                 >
                   {p.numero}
                 </span>
-                <p
-                  style={{
-                    fontFamily: "var(--font-syne), sans-serif",
-                    fontWeight: 700,
-                    fontSize: "15px",
-                    color: "#F5F5F5",
-                    margin: "0 0 8px",
-                  }}
-                >
+                <p style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 600, fontSize: "15px", color: "#111111", margin: "0 0 8px" }}>
                   {p.titulo}
                 </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontSize: "14px",
-                    color: "#AAAAAA",
-                    lineHeight: "1.6",
-                    margin: 0,
-                  }}
-                >
+                <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "14px", color: "#777777", lineHeight: "1.6", margin: 0 }}>
                   {p.descricao}
                 </p>
               </div>
@@ -184,46 +144,31 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         <Divider />
 
-        {/* Solução */}
         <Section label="Solução">
           <p style={bodyStyle}>{caso.solucao}</p>
         </Section>
 
         <Divider />
 
-        {/* Resultados */}
         <Section label="Resultados">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-              gap: "24px",
-              textAlign: "center",
-            }}
-          >
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "24px", textAlign: "center" }}>
             {caso.metricas.map((m) => (
               <div key={m.descricao}>
                 <span
                   style={{
                     display: "block",
-                    fontFamily: "var(--font-syne), sans-serif",
-                    fontWeight: 800,
+                    fontFamily: "var(--font-inter), sans-serif",
+                    fontWeight: 700,
                     fontSize: "clamp(40px, 6vw, 56px)",
-                    color: "#E5FF4A",
+                    color: "#111111",
                     lineHeight: "1",
                     marginBottom: "12px",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   {m.valor}
                 </span>
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontSize: "14px",
-                    color: "#888888",
-                    lineHeight: "1.4",
-                  }}
-                >
+                <span style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "14px", color: "#777777", lineHeight: "1.4" }}>
                   {m.descricao}
                 </span>
               </div>
@@ -233,28 +178,18 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         <Divider />
 
-        {/* Aprendizados */}
         <Section label="Aprendizados">
-          <ul
-            style={{
-              listStyle: "none",
-              padding: 0,
-              margin: 0,
-              display: "flex",
-              flexDirection: "column",
-              gap: "16px",
-            }}
-          >
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
             {caso.aprendizados.map((a, i) => (
               <li
                 key={i}
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   fontSize: "16px",
-                  color: "#AAAAAA",
+                  color: "#444444",
                   lineHeight: "1.75",
                   paddingLeft: "20px",
-                  borderLeft: "2px solid #E5FF4A",
+                  borderLeft: "2px solid #E5E5E3",
                 }}
               >
                 {a}
@@ -266,7 +201,7 @@ export default function CasePage({ caso }: { caso: Case }) {
         {/* Navigation */}
         <div
           style={{
-            borderTop: "1px solid #1F1F1F",
+            borderTop: "1px solid #E5E5E3",
             paddingTop: "40px",
             paddingBottom: "80px",
             display: "flex",
@@ -279,48 +214,24 @@ export default function CasePage({ caso }: { caso: Case }) {
           {prevCase ? (
             <Link
               href={`/cases/${prevCase.slug}`}
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "14px",
-                color: "#888888",
-                textDecoration: "none",
-                transition: "color 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                ;(e.target as HTMLElement).style.color = "#F5F5F5"
-              }}
-              onMouseLeave={(e) => {
-                ;(e.target as HTMLElement).style.color = "#888888"
-              }}
+              style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "14px", color: "#AAAAAA", textDecoration: "none", transition: "color 0.2s ease" }}
+              onMouseEnter={(e) => { ;(e.target as HTMLElement).style.color = "#111111" }}
+              onMouseLeave={(e) => { ;(e.target as HTMLElement).style.color = "#AAAAAA" }}
             >
               ← {prevCase.empresa}
             </Link>
-          ) : (
-            <span />
-          )}
+          ) : <span />}
 
           {nextCase ? (
             <Link
               href={`/cases/${nextCase.slug}`}
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "14px",
-                color: "#888888",
-                textDecoration: "none",
-                transition: "color 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                ;(e.target as HTMLElement).style.color = "#F5F5F5"
-              }}
-              onMouseLeave={(e) => {
-                ;(e.target as HTMLElement).style.color = "#888888"
-              }}
+              style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "14px", color: "#AAAAAA", textDecoration: "none", transition: "color 0.2s ease" }}
+              onMouseEnter={(e) => { ;(e.target as HTMLElement).style.color = "#111111" }}
+              onMouseLeave={(e) => { ;(e.target as HTMLElement).style.color = "#AAAAAA" }}
             >
               {nextCase.empresa} →
             </Link>
-          ) : (
-            <span />
-          )}
+          ) : <span />}
         </div>
       </div>
     </div>
@@ -328,42 +239,29 @@ export default function CasePage({ caso }: { caso: Case }) {
 }
 
 const bodyStyle: React.CSSProperties = {
-  fontFamily: "var(--font-dm-sans), sans-serif",
+  fontFamily: "var(--font-inter), sans-serif",
   fontSize: "16px",
-  color: "#AAAAAA",
+  color: "#555555",
   lineHeight: "1.75",
   margin: 0,
 }
 
 function Divider() {
-  return (
-    <div
-      style={{
-        height: "1px",
-        backgroundColor: "#1F1F1F",
-        margin: "56px 0",
-      }}
-    />
-  )
+  return <div style={{ height: "1px", backgroundColor: "#E5E5E3", margin: "56px 0" }} />
 }
 
-function Section({
-  label,
-  children,
-}: {
-  label: string
-  children: React.ReactNode
-}) {
+function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <section>
       <p
         style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: "12px",
+          fontFamily: "var(--font-inter), sans-serif",
+          fontSize: "11px",
+          fontWeight: 600,
           textTransform: "uppercase",
           letterSpacing: "0.1em",
-          color: "#888888",
-          margin: "0 0 12px",
+          color: "#AAAAAA",
+          margin: "0 0 16px",
         }}
       >
         {label}
@@ -376,27 +274,10 @@ function Section({
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p
-        style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: "12px",
-          textTransform: "uppercase",
-          letterSpacing: "0.1em",
-          color: "#888888",
-          margin: "0 0 8px",
-        }}
-      >
+      <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "#AAAAAA", margin: "0 0 6px" }}>
         {label}
       </p>
-      <p
-        style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: "14px",
-          color: "#F5F5F5",
-          margin: 0,
-          lineHeight: "1.5",
-        }}
-      >
+      <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "14px", color: "#111111", margin: 0, lineHeight: "1.5" }}>
         {value}
       </p>
     </div>

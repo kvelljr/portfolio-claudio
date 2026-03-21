@@ -4,12 +4,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        borderTop: "1px solid #1F1F1F",
-        marginTop: "120px",
-      }}
-    >
+    <footer style={{ borderTop: "1px solid #E5E5E3", marginTop: "120px" }}>
       <div
         style={{
           maxWidth: "1100px",
@@ -25,10 +20,10 @@ export default function Footer() {
         <div>
           <p
             style={{
-              fontFamily: "var(--font-syne), sans-serif",
-              fontWeight: 700,
+              fontFamily: "var(--font-inter), sans-serif",
+              fontWeight: 600,
               fontSize: "15px",
-              color: "#F5F5F5",
+              color: "#111111",
               margin: 0,
             }}
           >
@@ -36,9 +31,9 @@ export default function Footer() {
           </p>
           <p
             style={{
-              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontFamily: "var(--font-inter), sans-serif",
               fontSize: "13px",
-              color: "#888888",
+              color: "#777777",
               margin: "2px 0 0",
             }}
           >
@@ -51,17 +46,17 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             fontSize: "13px",
-            color: "#888888",
+            color: "#777777",
             textDecoration: "none",
             transition: "color 0.2s ease",
           }}
           onMouseEnter={(e) => {
-            ;(e.target as HTMLElement).style.color = "#E5FF4A"
+            ;(e.target as HTMLElement).style.color = "#111111"
           }}
           onMouseLeave={(e) => {
-            ;(e.target as HTMLElement).style.color = "#888888"
+            ;(e.target as HTMLElement).style.color = "#777777"
           }}
         >
           LinkedIn →
