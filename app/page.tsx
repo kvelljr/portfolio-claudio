@@ -38,7 +38,7 @@ export default function Home() {
             }}
           >
             <Image
-              src="/foto-claudio.jpg"
+              src="/claudio-souza.png"
               alt="Claudio Souza — Product Designer"
               fill
               style={{ objectFit: "cover", objectPosition: "top" }}
