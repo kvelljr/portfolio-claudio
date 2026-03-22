@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import Image from "next/image"
 
 const habilidades = [
@@ -42,6 +43,9 @@ const experiencias = [
 export default function SobreModal() {
   const [open, setOpen] = useState(false)
   const [habAtual, setHabAtual] = useState(0)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => { setMounted(true) }, [])
 
   const font = "var(--font-inter), sans-serif"
 
@@ -66,8 +70,8 @@ export default function SobreModal() {
         sobre mim
       </button>
 
-      {/* Overlay */}
-      {open && (
+      {/* Overlay — renderizado via portal no body para escapar do backdrop-filter do Nav */}
+      {open && mounted && createPortal(
         <div
           onClick={() => setOpen(false)}
           style={{
@@ -348,7 +352,8 @@ export default function SobreModal() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   )
