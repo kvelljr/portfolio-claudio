@@ -144,6 +144,34 @@ export default function CasePage({ caso }: { caso: Case }) {
           <p style={bodyStyle}>{caso.solucao}</p>
         </Section>
 
+        {/* Galeria de imagens */}
+        {caso.imagens && caso.imagens.length > 0 && (
+          <>
+            <Divider />
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              {caso.imagens.map((src, i) => (
+                <div
+                  key={i}
+                  style={{
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    backgroundColor: "#F5F5F3",
+                    lineHeight: 0,
+                  }}
+                >
+                  <Image
+                    src={src}
+                    alt={`${caso.title} — imagem ${i + 1}`}
+                    width={1200}
+                    height={750}
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <Divider />
 
         <Section label="Resultados">
@@ -175,23 +203,43 @@ export default function CasePage({ caso }: { caso: Case }) {
         <Divider />
 
         <Section label="Aprendizados">
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {caso.aprendizados.map((a, i) => (
-              <li
+              <div
                 key={i}
                 style={{
-                  fontFamily: "var(--font-inter), sans-serif",
-                  fontSize: "16px",
-                  color: "#444444",
-                  lineHeight: "1.75",
-                  paddingLeft: "20px",
-                  borderLeft: "2px solid #E5E5E3",
+                  backgroundColor: "#F7F7F5",
+                  border: "1px solid #E5E5E3",
+                  borderRadius: "12px",
+                  padding: "24px 28px",
                 }}
               >
-                {a}
-              </li>
+                <p
+                  style={{
+                    fontFamily: "var(--font-inter), sans-serif",
+                    fontWeight: 600,
+                    fontSize: "15px",
+                    color: "#111111",
+                    margin: "0 0 8px",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {a.titulo}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-inter), sans-serif",
+                    fontSize: "14px",
+                    color: "#777777",
+                    lineHeight: "1.7",
+                    margin: 0,
+                  }}
+                >
+                  {a.descricao}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </Section>
 
         {/* Navigation */}

@@ -1,3 +1,8 @@
+export type Aprendizado = {
+  titulo: string
+  descricao: string
+}
+
 export type Case = {
   slug: string
   title: string
@@ -12,8 +17,9 @@ export type Case = {
   problema: string
   processo: ProcessoItem[]
   solucao: string
+  imagens?: string[]
   metricas: Metrica[]
-  aprendizados: string[]
+  aprendizados: Aprendizado[]
 }
 
 export type ProcessoItem = {
@@ -58,15 +64,29 @@ export const cases: Case[] = [
       },
     ],
     solucao: "Reestruturação completa da arquitetura de informação da home: CTA de recarga acima do fold, seção de benefícios com destaque visual, FAQ integrado para reduzir tickets de suporte e fluxo de compra do Bilhete Digital simplificado em 4 passos.",
+    imagens: [
+      "/cases/autopass-01.png",
+      "/cases/autopass-02.png",
+      "/cases/autopass-03.png",
+    ],
     metricas: [
       { valor: "25%", descricao: "Redução de retrabalho nas entregas" },
       { valor: "90%", descricao: "Taxa de resolução nos testes de usabilidade" },
       { valor: "12+", descricao: "Melhorias implementadas na home" },
     ],
     aprendizados: [
-      "Decisões de design sem dado são apostas. Hotjar e entrevistas transformaram suposições em evidências.",
-      "CTA acima do fold não é clichê — é respeito pelo tempo do usuário.",
-      "Suporte ao cliente é um canal de pesquisa disfarçado. Cada ticket é uma falha de UX esperando ser resolvida.",
+      {
+        titulo: "Dado qualitativo é tão poderoso quanto o quantitativo.",
+        descricao: "Foram as falas dos usuários que justificaram cada decisão de layout. Apresentar o porquê rastreado em pesquisa tornou as decisões inegociáveis.",
+      },
+      {
+        titulo: "Clareza de acesso é mais importante que completude de funcionalidade.",
+        descricao: "A solução ideal seria recarga integrada na Home. A solução certa foi tornar o caminho óbvio, resolvendo a dor sem depender de integração técnica complexa.",
+      },
+      {
+        titulo: "Site institucional e ferramenta de serviço são produtos diferentes.",
+        descricao: "Redesenhar a Home foi, antes de tudo, redefinir o papel do canal. Essa mudança de perspectiva guiou todas as decisões de arquitetura.",
+      },
     ],
   },
   {
@@ -105,9 +125,18 @@ export const cases: Case[] = [
       { valor: "5★", descricao: "Avaliação média dos representantes" },
     ],
     aprendizados: [
-      "Autonomia bem desenhada é melhor que um time de suporte maior.",
-      "1.300 representantes com perfis diferentes exigem uma plataforma que seja flexível sem ser confusa.",
-      "Scaffolding é subestimado: guiar o usuário no primeiro uso define se ele volta ou abandona.",
+      {
+        titulo: "Autonomia bem desenhada é melhor que um time de suporte maior.",
+        descricao: "Quando o usuário consegue resolver sozinho, o time ganha capacidade e o produto ganha credibilidade. O design foi a ferramenta de escala.",
+      },
+      {
+        titulo: "1.300 representantes com perfis diferentes exigem flexibilidade sem confusão.",
+        descricao: "A solução foi criar hierarquias claras e progressão de complexidade, sem sobrecarregar o usuário desde o primeiro acesso.",
+      },
+      {
+        titulo: "Scaffolding é subestimado no design de produto.",
+        descricao: "Guiar o usuário no primeiro uso define se ele volta ou abandona. Onboarding não é feature — é parte do produto.",
+      },
     ],
   },
 ]
