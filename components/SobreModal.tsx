@@ -45,30 +45,12 @@ const experiencias = [
   },
 ]
 
-const FERR_PAGE_SIZE = 4
-const ferrPages = Math.ceil(ferramentas.length / FERR_PAGE_SIZE)
-
 export default function SobreModal() {
   const [open, setOpen] = useState(false)
   const [habAtual, setHabAtual] = useState(0)
-  const [ferrPage, setFerrPage] = useState(0)
-  const [ferrVisible, setFerrVisible] = useState(true)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => { setMounted(true) }, [])
-
-  // Auto-advance ferramentas com fade
-  useEffect(() => {
-    if (!open) return
-    const t = setInterval(() => {
-      setFerrVisible(false)
-      setTimeout(() => {
-        setFerrPage((p) => (p + 1) % ferrPages)
-        setFerrVisible(true)
-      }, 300)
-    }, 2800)
-    return () => clearInterval(t)
-  }, [open])
 
   const font = "var(--font-inter), sans-serif"
 
@@ -313,61 +295,34 @@ export default function SobreModal() {
                   </div>
                 </div>
 
-                {/* Card 5: Ferramentas que uso — carrossel 4 por vez */}
+                {/* Card 5: Ferramentas que uso — marquee contínuo */}
                 <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "28px 32px" }}>
                   <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "16px" }}>
                     Ferramentas que uso
                   </p>
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "8px",
-                      flexWrap: "nowrap",
-                      opacity: ferrVisible ? 1 : 0,
-                      transition: "opacity 0.3s ease",
-                      minHeight: "34px",
-                      alignItems: "center",
-                    }}
-                  >
-                    {ferramentas
-                      .slice(ferrPage * FERR_PAGE_SIZE, ferrPage * FERR_PAGE_SIZE + FERR_PAGE_SIZE)
-                      .map((f) => (
-                        <span
-                          key={f}
-                          style={{
-                            fontFamily: font,
-                            fontSize: "13px",
-                            color: "#444444",
-                            backgroundColor: "#F5F5F3",
-                            border: "1px solid #E5E5E3",
-                            borderRadius: "100px",
-                            padding: "6px 16px",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          {f}
-                        </span>
+                  <section className="ferramentas-section">
+                    <ul className="ferramentas-list">
+                      {[...ferramentas, ...ferramentas].map((f, i) => (
+                        <li key={i} style={{ flexShrink: 0 }}>
+                          <span
+                            style={{
+                              display: "inline-block",
+                              fontFamily: font,
+                              fontSize: "13px",
+                              color: "#444444",
+                              backgroundColor: "#F5F5F3",
+                              border: "1px solid #E5E5E3",
+                              borderRadius: "100px",
+                              padding: "6px 16px",
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {f}
+                          </span>
+                        </li>
                       ))}
-                  </div>
-                  {/* Dots */}
-                  <div style={{ display: "flex", gap: "6px", marginTop: "14px" }}>
-                    {Array.from({ length: ferrPages }).map((_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => { setFerrPage(i); setFerrVisible(true) }}
-                        style={{
-                          width: i === ferrPage ? "20px" : "7px",
-                          height: "7px",
-                          borderRadius: "100px",
-                          backgroundColor: i === ferrPage ? "#111111" : "#DDDDDD",
-                          border: "none",
-                          cursor: "pointer",
-                          padding: 0,
-                          transition: "all 0.25s ease",
-                        }}
-                      />
-                    ))}
-                  </div>
+                    </ul>
+                  </section>
                 </div>
 
                 {/* Foto + CTA */}
