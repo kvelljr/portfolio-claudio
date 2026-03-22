@@ -4,10 +4,6 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import Image from "next/image"
 
-const ferramentas = [
-  "Figma", "FigJam", "Miro", "Notion",
-  "Hotjar", "Microsoft Clarity", "Maze / Useberry", "ChatGPT / IA",
-]
 
 const habilidades = [
   {
@@ -293,39 +289,6 @@ export default function SobreModal() {
                       />
                     ))}
                   </div>
-                </div>
-
-                {/* Card 5: Ferramentas que uso — marquee contínuo */}
-                <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "28px 32px" }}>
-                  <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "16px" }}>
-                    Ferramentas que uso
-                  </p>
-                  <section className="ferramentas-section">
-                    <ul className="ferramentas-list">
-                      {[...ferramentas, ...ferramentas].map((f, i) => (
-                        <li key={i} style={{ flex: "0 0 120px" }}>
-                          <span
-                            style={{
-                              display: "block",
-                              fontFamily: font,
-                              fontSize: "12px",
-                              color: "#444444",
-                              backgroundColor: "#F5F5F3",
-                              border: "1px solid #E5E5E3",
-                              borderRadius: "100px",
-                              padding: "6px 0",
-                              textAlign: "center",
-                              whiteSpace: "nowrap",
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                            }}
-                          >
-                            {f}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
                 </div>
 
                 {/* Foto + CTA */}
