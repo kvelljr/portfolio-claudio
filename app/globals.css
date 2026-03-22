@@ -177,3 +177,22 @@
     display: none;
   }
 }
+
+/* Ferramentas marquee */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ferramentas-track {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.ferramentas-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 14s linear infinite;
+}
+.ferramentas-marquee:hover {
+  animation-play-state: paused;
+}

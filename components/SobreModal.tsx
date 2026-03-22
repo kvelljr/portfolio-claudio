@@ -295,17 +295,32 @@ export default function SobreModal() {
                   </div>
                 </div>
 
-                {/* Card 5: Ferramentas que uso */}
+                {/* Card 5: Ferramentas que uso — marquee */}
                 <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "28px 32px" }}>
                   <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "16px" }}>
                     Ferramentas que uso
                   </p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                    {ferramentas.map((f) => (
-                      <span key={f} style={{ fontFamily: font, fontSize: "13px", color: "#444444", backgroundColor: "#F5F5F3", border: "1px solid #E5E5E3", borderRadius: "100px", padding: "6px 16px" }}>
-                        {f}
-                      </span>
-                    ))}
+                  <div className="ferramentas-track">
+                    <div className="ferramentas-marquee">
+                      {[...ferramentas, ...ferramentas].map((f, i) => (
+                        <span
+                          key={i}
+                          style={{
+                            fontFamily: font,
+                            fontSize: "13px",
+                            color: "#444444",
+                            backgroundColor: "#F5F5F3",
+                            border: "1px solid #E5E5E3",
+                            borderRadius: "100px",
+                            padding: "6px 16px",
+                            whiteSpace: "nowrap",
+                            marginRight: "8px",
+                          }}
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
