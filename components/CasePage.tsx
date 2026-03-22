@@ -96,13 +96,29 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         <Divider />
 
-        <Section label="O problema">
-          <p style={bodyStyle}>{caso.problema}</p>
+        <Section label="O desafio">
+          <ul style={{ margin: 0, padding: "0 0 0 20px", display: "flex", flexDirection: "column", gap: "10px" }}>
+            {caso.desafios.map((d, i) => (
+              <li key={i} style={{ ...bodyStyle, margin: 0 }}>{d}</li>
+            ))}
+          </ul>
         </Section>
 
         <Divider />
 
-        <Section label="Processo">
+        <Section label="Meu papel">
+          <p style={{ ...bodyStyle, marginBottom: "20px" }}>{caso.meuPapel.intro}</p>
+          <ul style={{ margin: 0, padding: "0 0 0 20px", display: "flex", flexDirection: "column", gap: "10px" }}>
+            {caso.meuPapel.atividades.map((a, i) => (
+              <li key={i} style={{ ...bodyStyle, margin: 0 }}>{a}</li>
+            ))}
+          </ul>
+        </Section>
+
+        <Divider />
+
+        <Section label="Abordagem de design">
+          <p style={{ ...bodyStyle, marginBottom: "32px" }}>{caso.abordagem}</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px" }}>
             {caso.processo.map((p) => (
               <div
@@ -174,8 +190,8 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         <Divider />
 
-        <Section label="Resultados">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "24px", textAlign: "center" }}>
+        <Section label="Resultados e impacto">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "24px", textAlign: "center", marginBottom: "40px" }}>
             {caso.metricas.map((m) => (
               <div key={m.descricao}>
                 <span
@@ -198,6 +214,11 @@ export default function CasePage({ caso }: { caso: Case }) {
               </div>
             ))}
           </div>
+          <ul style={{ margin: 0, padding: "0 0 0 20px", display: "flex", flexDirection: "column", gap: "10px" }}>
+            {caso.resultadosBullets.map((r, i) => (
+              <li key={i} style={{ ...bodyStyle, margin: 0 }}>{r}</li>
+            ))}
+          </ul>
         </Section>
 
         <Divider />
