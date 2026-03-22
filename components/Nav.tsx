@@ -49,7 +49,7 @@ export default function Nav() {
         </Link>
 
         <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
-          <NavLink href="/">trabalhos</NavLink>
+          <NavLink href="/#trabalhos">trabalhos</NavLink>
           <SobreModal />
           <ContatoModal />
         </div>

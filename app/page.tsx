@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* ── CASES ── */}
-      <section style={{ paddingBottom: "80px" }}>
+      <section id="trabalhos" style={{ paddingBottom: "80px" }}>
         <p
           style={{
             fontFamily: "var(--font-inter), sans-serif",

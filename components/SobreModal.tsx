@@ -170,41 +170,37 @@ export default function SobreModal() {
                 </p>
               </div>
 
-              {/* ── Card 2: O que faço melhor ── */}
-              <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "32px" }}>
-                <p
-                  style={{
-                    fontFamily: font,
-                    fontSize: "11px",
-                    color: "#AAAAAA",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                    marginBottom: "14px",
-                  }}
-                >
+              {/* ── Card 2: O que faço melhor (swipeable) ── */}
+              <div
+                style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "32px", cursor: "grab", userSelect: "none" }}
+                onTouchStart={(e) => { (e.currentTarget as HTMLElement).dataset.touchX = String(e.touches[0].clientX) }}
+                onTouchEnd={(e) => {
+                  const startX = Number((e.currentTarget as HTMLElement).dataset.touchX)
+                  const diff = startX - e.changedTouches[0].clientX
+                  if (Math.abs(diff) > 40) {
+                    if (diff > 0) setHabAtual((h) => (h + 1) % habilidades.length)
+                    else setHabAtual((h) => (h - 1 + habilidades.length) % habilidades.length)
+                  }
+                }}
+                onMouseDown={(e) => { (e.currentTarget as HTMLElement).dataset.mouseX = String(e.clientX); (e.currentTarget as HTMLElement).style.cursor = "grabbing" }}
+                onMouseUp={(e) => {
+                  const startX = Number((e.currentTarget as HTMLElement).dataset.mouseX)
+                  const diff = startX - e.clientX;
+                  (e.currentTarget as HTMLElement).style.cursor = "grab"
+                  if (Math.abs(diff) > 40) {
+                    if (diff > 0) setHabAtual((h) => (h + 1) % habilidades.length)
+                    else setHabAtual((h) => (h - 1 + habilidades.length) % habilidades.length)
+                  }
+                }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.cursor = "grab" }}
+              >
+                <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "14px" }}>
                   O que faço melhor
                 </p>
-                <h3
-                  style={{
-                    fontFamily: font,
-                    fontWeight: 700,
-                    fontSize: "20px",
-                    color: "#111111",
-                    margin: "0 0 12px",
-                  }}
-                >
+                <h3 style={{ fontFamily: font, fontWeight: 700, fontSize: "20px", color: "#111111", margin: "0 0 12px" }}>
                   {habilidades[habAtual].titulo}
                 </h3>
-                <p
-                  style={{
-                    fontFamily: font,
-                    fontSize: "15px",
-                    lineHeight: "1.7",
-                    color: "#666666",
-                    margin: "0 0 28px",
-                    minHeight: "60px",
-                  }}
-                >
+                <p style={{ fontFamily: font, fontSize: "15px", lineHeight: "1.7", color: "#666666", margin: "0 0 28px", minHeight: "60px" }}>
                   {habilidades[habAtual].descricao}
                 </p>
                 {/* Dots */}
