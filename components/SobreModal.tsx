@@ -119,14 +119,11 @@ export default function SobreModal() {
 
             {/* Bento Grid */}
             <div
+              className="bento-grid"
               style={{
                 backgroundColor: "#ECECEA",
                 borderRadius: "24px",
                 padding: "8px",
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gridTemplateRows: "auto auto",
-                gap: "8px",
                 overflowY: "visible",
               }}
             >
@@ -290,7 +287,7 @@ export default function SobreModal() {
               </div>
 
               {/* ── Coluna direita inferior: Foto + CTA ── */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px" }}>
+              <div className="bento-sub-grid">
                 {/* Foto */}
                 <div style={{ borderRadius: "18px", overflow: "hidden", minHeight: "180px" }}>
                   <Image

@@ -20,8 +20,8 @@ export default function Nav() {
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
-          padding: "0 24px",
-          height: "60px",
+          padding: "0 16px",
+          height: "56px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

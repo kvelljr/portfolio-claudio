@@ -63,3 +63,117 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+/* ── RESPONSIVO ── */
+
+/* Hero grid: 2 colunas → 1 coluna */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 640px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Foto hero: fixa → centralizada no mobile */
+.hero-photo {
+  width: 220px;
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #E5E5E3;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .hero-photo {
+    width: 160px;
+    margin: 0 auto;
+  }
+}
+
+/* Cases grid: 2 colunas → 1 coluna */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 640px) {
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Metadata do case: 4 colunas → 2 colunas */
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 640px) {
+  .case-meta-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Processo: 3 cards → 1 coluna */
+.processo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .processo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Métricas: 3 → 1 coluna */
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 640px) {
+  .metricas-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Bento modal sobre mim: 2 colunas → 1 coluna */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sub-grid da coluna direita do bento */
+.bento-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .bento-sub-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Nav: padding responsivo */
+@media (max-width: 640px) {
+  .nav-links span.nav-label {
+    display: none;
+  }
+}

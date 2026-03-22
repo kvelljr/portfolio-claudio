@@ -73,10 +73,8 @@ export default function CasePage({ caso }: { caso: Case }) {
 
         {/* Metadata grid */}
         <div
+          className="case-meta-grid"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "24px",
             marginBottom: "48px",
             padding: "28px",
             backgroundColor: "#F7F7F5",

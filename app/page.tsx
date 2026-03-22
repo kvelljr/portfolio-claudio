@@ -17,25 +17,9 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section style={{ paddingTop: "80px", paddingBottom: "96px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "220px 1fr",
-            gap: "56px",
-            alignItems: "start",
-          }}
-        >
+        <div className="hero-grid">
           {/* Foto */}
-          <div
-            style={{
-              width: "220px",
-              aspectRatio: "9/16",
-              borderRadius: "20px",
-              overflow: "hidden",
-              border: "1px solid #E5E5E3",
-              flexShrink: 0,
-            }}
-          >
+          <div className="hero-photo">
             <Image
               src="/claudio-souza.png"
               alt="Claudio Souza — Product Designer"
