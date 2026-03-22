@@ -119,6 +119,11 @@ export const cases: Case[] = [
       },
     ],
     solucao: "Portal exclusivo para representantes com: tela de entrada personalizada, fluxo de pedido autônomo em 4 passos, ferramenta de personalização de arte, dashboard analítico completo e visibilidade de clientes inativos — tudo sem precisar acionar o time interno.",
+    imagens: [
+      "/cases/marcon-01.png",
+      "/cases/marcon-02.png",
+      "/cases/marcon-03.png",
+    ],
     metricas: [
       { valor: "100%", descricao: "Dos pedidos migrados para o portal" },
       { valor: "Zero", descricao: "Tickets de suporte após o lançamento" },
