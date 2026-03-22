@@ -43,7 +43,9 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Product Designer focado em e-commerce e produtos SaaS.
+              Olá, sou o Cláudio.<br />
+              Product Designer focado em<br />
+              e-commerce e produtos SaaS.
             </h1>
 
             <p
