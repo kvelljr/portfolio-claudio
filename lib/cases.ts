@@ -119,6 +119,11 @@ export const cases: Case[] = [
       },
     ],
     solucao: "Redesign completo das páginas Home, Catálogo e Produto com foco em conversão: nova paleta orgânica (bege, off-white e tons de terra) alinhada ao posicionamento '100% natural', arquitetura da informação que comunica os 11 super ingredientes e benefícios de performance de forma imediata, seção de prova social e time de embaixadores, e jornada de compra simplificada até o checkout.",
+    imagens: [
+      "/cases/forcecoffe-01.png",
+      "/cases/forcecoffe-02.png",
+      "/cases/forcecoffe-03.png",
+    ],
     metricas: [
       { valor: "3", descricao: "Páginas redesenhadas (Home, Catálogo e Produto)" },
       { valor: "11", descricao: "Super ingredientes comunicados na nova arquitetura" },
