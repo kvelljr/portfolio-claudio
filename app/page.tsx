@@ -20,7 +20,7 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "280px 1fr",
+            gridTemplateColumns: "220px 1fr",
             gap: "56px",
             alignItems: "start",
           }}
@@ -28,8 +28,8 @@ export default function Home() {
           {/* Foto */}
           <div
             style={{
-              width: "280px",
-              height: "280px",
+              width: "220px",
+              aspectRatio: "9/16",
               borderRadius: "20px",
               overflow: "hidden",
               border: "1px solid #E5E5E3",
@@ -39,9 +39,9 @@ export default function Home() {
             <Image
               src="/claudio-souza.png"
               alt="Claudio Souza — Product Designer"
-              width={280}
-              height={280}
-              style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }}
+              width={220}
+              height={391}
+              style={{ objectFit: "cover", objectPosition: "top center", width: "100%", height: "100%" }}
               priority
             />
           </div>
