@@ -75,7 +75,7 @@ export default function CaseCard({ caso }: { caso: Case }) {
               lineHeight: "1.5",
               flex: 1,
               display: "-webkit-box",
-              WebkitLineClamp: 2,
+              WebkitLineClamp: 3,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
             }}
