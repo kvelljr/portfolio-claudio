@@ -4,6 +4,11 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import Image from "next/image"
 
+const ferramentas = [
+  "Figma", "FigJam", "Miro", "Notion",
+  "Hotjar", "Microsoft Clarity", "Maze / Useberry", "ChatGPT / IA",
+]
+
 const habilidades = [
   {
     titulo: "Product Design",
@@ -341,6 +346,19 @@ export default function SobreModal() {
                   >
                     Ver LinkedIn →
                   </a>
+                </div>
+              </div>
+              {/* ── Card 5: Ferramentas que uso (full width) ── */}
+              <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "28px 32px", gridColumn: "1 / -1" }}>
+                <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "16px" }}>
+                  Ferramentas que uso
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                  {ferramentas.map((f) => (
+                    <span key={f} style={{ fontFamily: font, fontSize: "13px", color: "#444444", backgroundColor: "#F5F5F3", border: "1px solid #E5E5E3", borderRadius: "100px", padding: "6px 16px" }}>
+                      {f}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
