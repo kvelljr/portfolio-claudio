@@ -35,11 +35,11 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: "var(--font-inter), sans-serif",
-                fontWeight: 700,
+                fontWeight: 300,
                 fontSize: "clamp(28px, 3.2vw, 40px)",
                 color: "#111111",
-                lineHeight: "1.2",
-                letterSpacing: "-0.02em",
+                lineHeight: "1.3",
+                letterSpacing: "-0.01em",
                 margin: 0,
               }}
             >
