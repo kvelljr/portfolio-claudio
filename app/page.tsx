@@ -43,7 +43,7 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Olá, sou o Cláudio.<br />
+              <span style={{ fontWeight: 700 }}>Olá, sou o Cláudio.</span><br />
               Product Designer focado em<br />
               e-commerce e produtos SaaS.
             </h1>
