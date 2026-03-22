@@ -52,7 +52,7 @@ export const cases: Case[] = [
     ferramentas: ["Figma", "FigJam", "Hotjar", "Notion"],
     tags: ["UX Research", "UI Design", "Fintech", "Mobile"],
     cover: "/cases/autopass-cover.png",
-    contexto: "A Autopass é uma plataforma de pagamento de transporte urbano que conecta o cartão TOP ao dia a dia de milhares de usuários em São Paulo. A home do produto evoluiu de forma fragmentada ao longo do tempo, acumulando seções informativas que não respondiam às perguntas essenciais de quem chegava sem contexto.\n\nO desafio era claro: redesenhar a home sem gerar ruptura para quem já usava o produto — mas reorganizando a arquitetura de forma que o produto fizesse sentido imediato para novos usuários e reduzisse a carga sobre o time de suporte.\n\nAssumi o projeto com foco em clareza, hierarquia e conversão: transformar uma home que confundia em uma que guiava.",
+    contexto: "A Autopass é uma plataforma de pagamento de transporte urbano que conecta o cartão TOP ao dia a dia de milhares de usuários em São Paulo. A home do produto evoluiu de forma fragmentada ao longo do tempo, acumulando seções informativas que não respondiam às perguntas essenciais de quem chegava sem contexto.\n\nO desafio era claro: redesenhar a home sem gerar ruptura para quem já usava o produto, reorganizando a arquitetura de forma que o produto fizesse sentido imediato para novos usuários e reduzisse a carga sobre o time de suporte.\n\nAssumi o projeto com foco em clareza, hierarquia e conversão: transformar uma home que confundia em uma que guiava.",
     desafios: [
       "Usuários chegavam na home e não entendiam o que o produto oferecia",
       "O CTA de recarga ficava abaixo do fold, fora do campo visual imediato",
@@ -70,7 +70,7 @@ export const cases: Case[] = [
         "Atuar como referência de design nas decisões estruturais do produto",
       ],
     },
-    abordagem: "O projeto foi conduzido com discovery contínuo: análise comportamental via Hotjar, entrevistas com usuários que chegavam ao site pela primeira vez e acompanhamento dos principais motivos de ticket no suporte. O contato direto com as dores reais de quem usava o produto foi o que direcionou cada decisão de priorização — e tornou inegociável cada mudança proposta.",
+    abordagem: "O projeto foi conduzido com discovery contínuo: análise comportamental via Hotjar, entrevistas com usuários que chegavam ao site pela primeira vez e acompanhamento dos principais motivos de ticket no suporte. O contato direto com as dores reais de quem usava o produto foi o que direcionou cada decisão de priorização e tornou inegociável cada mudança proposta.",
     processo: [
       {
         numero: "01",
@@ -108,7 +108,7 @@ export const cases: Case[] = [
     aprendizados: [
       {
         titulo: "Dado qualitativo é tão poderoso quanto o quantitativo.",
-        descricao: "Foram as falas dos usuários que justificaram cada decisão de layout. Apresentar o porquê rastreado em pesquisa tornou as decisões inegociáveis — inclusive com o time de negócio.",
+        descricao: "Foram as falas dos usuários que justificaram cada decisão de layout. Apresentar o porquê rastreado em pesquisa tornou as decisões inegociáveis, inclusive com o time de negócio.",
       },
       {
         titulo: "Clareza de acesso é mais importante que completude de funcionalidade.",
@@ -130,10 +130,10 @@ export const cases: Case[] = [
     ferramentas: ["Figma", "Tray E-commerce"],
     tags: ["UX Research", "UI Design", "E-commerce", "Benchmark"],
     cover: "/cases/forcecoffe-cover.png",
-    contexto: "A Force Coffee é uma bebida energética com 11 super ingredientes naturais posicionada no mercado premium de saúde e performance. O e-commerce existente acumulava problemas que iam na contramão do posicionamento da marca: paleta escura e pesada, arquitetura confusa e uma comunicação que não respondia às dúvidas básicas de quem chegava pela primeira vez.\n\nO desafio era redesenhar a experiência de compra garantindo que qualquer pessoa entendesse o produto, confiasse nele e soubesse como comprá-lo — logo nos primeiros segundos de navegação.\n\nAssumi o projeto como Designer UX/UI responsável pelo redesign completo, da análise inicial à entrega das páginas prontas para implementação.",
+    contexto: "A Force Coffee é uma bebida energética com 11 super ingredientes naturais posicionada no mercado premium de saúde e performance. O e-commerce existente acumulava problemas que iam na contramão do posicionamento da marca: paleta escura e pesada, arquitetura confusa e uma comunicação que não respondia às dúvidas básicas de quem chegava pela primeira vez.\n\nO desafio era redesenhar a experiência de compra garantindo que qualquer pessoa entendesse o produto, confiasse nele e soubesse como comprá-lo, logo nos primeiros segundos de navegação.\n\nAssumi o projeto como Designer UX/UI responsável pelo redesign completo, da análise inicial à entrega das páginas prontas para implementação.",
     desafios: [
       "Paleta escura e institucional em conflito direto com o posicionamento '100% natural'",
-      "Home sem hierarquia clara — o usuário não sabia o que o produto era nem por que comprá-lo",
+      "Home sem hierarquia clara: o usuário não sabia o que o produto era nem por que comprá-lo",
       "Os 11 ingredientes naturais, maior diferencial da marca, não apareciam na jornada de compra",
       "Abandono precoce antes mesmo do usuário chegar à página de produto ou ao checkout",
       "Ausência de prova social e validação externa que gerasse confiança na marca",
@@ -149,7 +149,7 @@ export const cases: Case[] = [
         "Entregar handoff completo para implementação na plataforma Tray",
       ],
     },
-    abordagem: "A análise começou pelo benchmark: marcas de lifestyle e health food que já conquistaram a confiança visual do público-alvo. Ficou claro que o padrão esperado para esse segmento é completamente oposto ao que estava implementado — tons claros, fotografia limpa e copy orientado a benefícios. A partir disso, cada decisão de redesign foi justificada por dados de referência de mercado, tornando o processo mais objetivo e a aprovação do cliente mais rápida.",
+    abordagem: "A análise começou pelo benchmark: marcas de lifestyle e health food que já conquistaram a confiança visual do público-alvo. Ficou claro que o padrão esperado para esse segmento é completamente oposto ao que estava implementado: tons claros, fotografia limpa e copy orientado a benefícios. A partir disso, cada decisão de redesign foi justificada por dados de referência de mercado, tornando o processo mais objetivo e a aprovação do cliente mais rápida.",
     processo: [
       {
         numero: "01",
@@ -187,14 +187,14 @@ export const cases: Case[] = [
     aprendizados: [
       {
         titulo: "Paleta de cores é posicionamento, não estética.",
-        descricao: "A troca do fundo escuro para tons orgânicos não foi apenas visual — foi o alinhamento da interface com a promessa '100% natural' da marca. Design e estratégia precisam falar a mesma língua.",
+        descricao: "A troca do fundo escuro para tons orgânicos não foi apenas visual. Foi o alinhamento da interface com a promessa '100% natural' da marca. Design e estratégia precisam falar a mesma língua.",
       },
       {
         titulo: "O usuário decide em segundos: clareza é conversão.",
         descricao: "A nova Home foi desenhada para responder imediatamente: o que é o produto, quais são os benefícios e por que comprar. Arquitetura de informação bem feita reduz fricção sem precisar de mais conteúdo.",
       },
       {
-        titulo: "Benchmark não é cópia — é calibração de expectativas.",
+        titulo: "Benchmark não é cópia, é calibração de expectativas.",
         descricao: "Analisar concorrentes de lifestyle e health food ajudou a entender o padrão visual que o público já espera. A pesquisa justificou cada decisão de redesign perante o cliente.",
       },
     ],
@@ -209,16 +209,16 @@ export const cases: Case[] = [
     ferramentas: ["Figma", "FigJam", "Miro", "Notion", "Maze"],
     tags: ["UX Research", "UI Design", "B2B", "Plataforma Web"],
     cover: "/cases/marcon-cover.png",
-    contexto: "A Marcon Indústria Metalúrgica conta com mais de 1.300 representantes comerciais espalhados pelo Brasil. Antes do portal, cada pedido, consulta de estoque ou personalização de material de vendas exigia contato direto com o time interno — via telefone ou e-mail.\n\nO processo era lento, sujeito a erros e gerava uma carga operacional crescente para o time de vendas. Com mais de 5.000 produtos no catálogo, a falta de visibilidade em tempo real tornava o trabalho dos representantes ainda mais dependente e ineficiente.\n\nO projeto foi construído do zero: sem referência de sistema anterior e com um público muito heterogêneo — de jovens digitalizados a representantes com décadas de experiência no segmento metalúrgico.",
+    contexto: "A Marcon Indústria Metalúrgica conta com mais de 1.300 representantes comerciais espalhados pelo Brasil. Antes do portal, cada pedido, consulta de estoque ou personalização de material de vendas exigia contato direto com o time interno: via telefone ou e-mail.\n\nO processo era lento, sujeito a erros e gerava uma carga operacional crescente para o time de vendas. Com mais de 5.000 produtos no catálogo, a falta de visibilidade em tempo real tornava o trabalho dos representantes ainda mais dependente e ineficiente.\n\nO projeto foi construído do zero: sem referência de sistema anterior e com um público muito heterogêneo, de jovens digitalizados a representantes com décadas de experiência no segmento metalúrgico.",
     desafios: [
       "Representantes sem autonomia dependiam de ligações e e-mails para cada pedido",
       "Processo manual gerava erros frequentes, atrasos e retrabalho na operação",
       "5.000+ produtos sem visibilidade em tempo real para quem estava em campo",
       "Time de vendas interno sobrecarregado com demandas puramente operacionais",
-      "Perfis de usuário muito diferentes — do representante analógico ao digital",
+      "Perfis de usuário muito diferentes: do representante analógico ao digital",
     ],
     meuPapel: {
-      intro: "Atuei como Product Designer responsável por toda a experiência do portal, do mapeamento de dores à entrega para desenvolvimento — sem produto de referência anterior.",
+      intro: "Atuei como Product Designer responsável por toda a experiência do portal, do mapeamento de dores à entrega para desenvolvimento, sem produto de referência anterior.",
       atividades: [
         "Conduzir entrevistas com representantes de diferentes regiões e perfis",
         "Mapear fluxos existentes e identificar oportunidades de automação",
@@ -227,7 +227,7 @@ export const cases: Case[] = [
         "Iterar até aprovação e realizar handoff completo para o time de desenvolvimento",
       ],
     },
-    abordagem: "O trabalho começou com entrevistas presenciais e remotas com representantes de diferentes regiões. O mapeamento mostrou que o problema não era tecnológico — era de autonomia. O representante precisava de uma ferramenta que funcionasse como um assistente operacional no campo, não como mais um sistema para aprender. As soluções foram validadas de forma incremental com usuários reais antes de cada etapa de desenvolvimento, garantindo que nenhuma entrega gerasse ruptura na rotina já consolidada.",
+    abordagem: "O trabalho começou com entrevistas presenciais e remotas com representantes de diferentes regiões. O mapeamento mostrou que o problema não era tecnológico: era de autonomia. O representante precisava de uma ferramenta que funcionasse como um assistente operacional no campo, não como mais um sistema para aprender. As soluções foram validadas de forma incremental com usuários reais antes de cada etapa de desenvolvimento, garantindo que nenhuma entrega gerasse ruptura na rotina já consolidada.",
     processo: [
       {
         numero: "01",
@@ -245,7 +245,7 @@ export const cases: Case[] = [
         descricao: "Prototipagem de alta fidelidade, testes com representantes reais e iteração até aprovação para handoff com o time de desenvolvimento.",
       },
     ],
-    solucao: "Portal exclusivo para representantes com: tela de entrada personalizada por perfil, fluxo de pedido autônomo em 4 passos, ferramenta de personalização de material publicitário, dashboard analítico com visibilidade de clientes inativos — tudo sem precisar acionar o time interno. O sistema foi projetado para ser intuitivo mesmo para representantes com menor familiaridade digital.",
+    solucao: "Portal exclusivo para representantes com: tela de entrada personalizada por perfil, fluxo de pedido autônomo em 4 passos, ferramenta de personalização de material publicitário, dashboard analítico com visibilidade de clientes inativos, tudo sem precisar acionar o time interno. O sistema foi projetado para ser intuitivo mesmo para representantes com menor familiaridade digital.",
     imagens: [
       "/cases/marcon-01.png",
       "/cases/marcon-02.png",
@@ -259,20 +259,20 @@ export const cases: Case[] = [
     resultadosBullets: [
       "100% dos pedidos migraram do processo manual para o portal",
       "Zero tickets de suporte operacional registrados após o lançamento",
-      "Representantes ganharam autonomia total — sem precisar acionar o time interno",
+      "Representantes ganharam autonomia total, sem precisar acionar o time interno",
       "Time de vendas liberado das demandas operacionais para focar em estratégia",
     ],
     aprendizados: [
       {
         titulo: "Autonomia bem desenhada é melhor que um time de suporte maior.",
-        descricao: "Quando o usuário consegue resolver sozinho, o time ganha capacidade e o produto ganha credibilidade. O design foi a ferramenta de escala — não a contratação.",
+        descricao: "Quando o usuário consegue resolver sozinho, o time ganha capacidade e o produto ganha credibilidade. O design foi a ferramenta de escala, não a contratação.",
       },
       {
         titulo: "1.300 representantes com perfis diferentes exigem flexibilidade sem confusão.",
         descricao: "A solução foi criar hierarquias claras e progressão de complexidade, sem sobrecarregar o usuário desde o primeiro acesso. Cada módulo foi testado com perfis distintos.",
       },
       {
-        titulo: "Onboarding não é feature — é parte do produto.",
+        titulo: "Onboarding não é feature, é parte do produto.",
         descricao: "Guiar o usuário no primeiro uso define se ele volta ou abandona. Scaffolding bem pensado foi o que garantiu adoção real por representantes com diferentes níveis de familiaridade digital.",
       },
     ],
