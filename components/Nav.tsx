@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import SobreModal from "./SobreModal"
+import ContatoModal from "./ContatoModal"
 
 export default function Nav() {
   return (
@@ -50,32 +51,7 @@ export default function Nav() {
         <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
           <NavLink href="/">trabalhos</NavLink>
           <SobreModal />
-          <Link
-            href="https://linkedin.com/in/claudiojuniorkv"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              backgroundColor: "#111111",
-              color: "#FFFFFF",
-              fontFamily: "var(--font-inter), sans-serif",
-              fontSize: "13px",
-              fontWeight: 500,
-              padding: "7px 16px",
-              borderRadius: "100px",
-              textDecoration: "none",
-              transition: "background-color 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              ;(e.currentTarget as HTMLElement).style.backgroundColor = "#333333"
-            }}
-            onMouseLeave={(e) => {
-              ;(e.currentTarget as HTMLElement).style.backgroundColor = "#111111"
-            }}
-          >
-            Contato
-          </Link>
+          <ContatoModal />
         </div>
       </div>
     </nav>
