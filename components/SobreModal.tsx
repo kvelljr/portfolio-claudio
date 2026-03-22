@@ -45,12 +45,30 @@ const experiencias = [
   },
 ]
 
+const FERR_PAGE_SIZE = 4
+const ferrPages = Math.ceil(ferramentas.length / FERR_PAGE_SIZE)
+
 export default function SobreModal() {
   const [open, setOpen] = useState(false)
   const [habAtual, setHabAtual] = useState(0)
+  const [ferrPage, setFerrPage] = useState(0)
+  const [ferrVisible, setFerrVisible] = useState(true)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => { setMounted(true) }, [])
+
+  // Auto-advance ferramentas com fade
+  useEffect(() => {
+    if (!open) return
+    const t = setInterval(() => {
+      setFerrVisible(false)
+      setTimeout(() => {
+        setFerrPage((p) => (p + 1) % ferrPages)
+        setFerrVisible(true)
+      }, 300)
+    }, 2800)
+    return () => clearInterval(t)
+  }, [open])
 
   const font = "var(--font-inter), sans-serif"
 
@@ -136,7 +154,7 @@ export default function SobreModal() {
               <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
 
                 {/* Card 1: Sobre mim */}
-                <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "32px" }}>
+                <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "32px", flex: 1 }}>
                   <h2
                     style={{
                       fontFamily: font,
@@ -295,16 +313,27 @@ export default function SobreModal() {
                   </div>
                 </div>
 
-                {/* Card 5: Ferramentas que uso — marquee */}
+                {/* Card 5: Ferramentas que uso — carrossel 4 por vez */}
                 <div style={{ backgroundColor: "#FFFFFF", borderRadius: "18px", padding: "28px 32px" }}>
                   <p style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "16px" }}>
                     Ferramentas que uso
                   </p>
-                  <div className="ferramentas-track">
-                    <div className="ferramentas-marquee">
-                      {[...ferramentas, ...ferramentas].map((f, i) => (
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "8px",
+                      flexWrap: "nowrap",
+                      opacity: ferrVisible ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                      minHeight: "34px",
+                      alignItems: "center",
+                    }}
+                  >
+                    {ferramentas
+                      .slice(ferrPage * FERR_PAGE_SIZE, ferrPage * FERR_PAGE_SIZE + FERR_PAGE_SIZE)
+                      .map((f) => (
                         <span
-                          key={i}
+                          key={f}
                           style={{
                             fontFamily: font,
                             fontSize: "13px",
@@ -314,13 +343,30 @@ export default function SobreModal() {
                             borderRadius: "100px",
                             padding: "6px 16px",
                             whiteSpace: "nowrap",
-                            marginRight: "8px",
                           }}
                         >
                           {f}
                         </span>
                       ))}
-                    </div>
+                  </div>
+                  {/* Dots */}
+                  <div style={{ display: "flex", gap: "6px", marginTop: "14px" }}>
+                    {Array.from({ length: ferrPages }).map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => { setFerrPage(i); setFerrVisible(true) }}
+                        style={{
+                          width: i === ferrPage ? "20px" : "7px",
+                          height: "7px",
+                          borderRadius: "100px",
+                          backgroundColor: i === ferrPage ? "#111111" : "#DDDDDD",
+                          border: "none",
+                          cursor: "pointer",
+                          padding: 0,
+                          transition: "all 0.25s ease",
+                        }}
+                      />
+                    ))}
                   </div>
                 </div>
 
