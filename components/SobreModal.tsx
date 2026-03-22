@@ -303,18 +303,21 @@ export default function SobreModal() {
                   <section className="ferramentas-section">
                     <ul className="ferramentas-list">
                       {[...ferramentas, ...ferramentas].map((f, i) => (
-                        <li key={i} style={{ flexShrink: 0 }}>
+                        <li key={i} style={{ flex: "0 0 120px" }}>
                           <span
                             style={{
-                              display: "inline-block",
+                              display: "block",
                               fontFamily: font,
-                              fontSize: "13px",
+                              fontSize: "12px",
                               color: "#444444",
                               backgroundColor: "#F5F5F3",
                               border: "1px solid #E5E5E3",
                               borderRadius: "100px",
-                              padding: "6px 16px",
+                              padding: "6px 0",
+                              textAlign: "center",
                               whiteSpace: "nowrap",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
                             }}
                           >
                             {f}
@@ -326,9 +329,9 @@ export default function SobreModal() {
                 </div>
 
                 {/* Foto + CTA */}
-                <div className="bento-sub-grid">
+                <div className="bento-sub-grid" style={{ flex: 1 }}>
                   {/* Foto */}
-                  <div style={{ borderRadius: "18px", overflow: "hidden", minHeight: "180px" }}>
+                  <div style={{ borderRadius: "18px", overflow: "hidden" }}>
                     <Image
                       src="/claudio-souza.png"
                       alt="Claudio Souza"
