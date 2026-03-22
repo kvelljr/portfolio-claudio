@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import SobreModal from "./SobreModal"
 
 export default function Nav() {
   return (
@@ -48,6 +49,7 @@ export default function Nav() {
 
         <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
           <NavLink href="/">trabalhos</NavLink>
+          <SobreModal />
           <Link
             href="https://linkedin.com/in/claudiojuniorkv"
             target="_blank"
