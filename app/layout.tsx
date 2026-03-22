@@ -14,6 +14,30 @@ export const metadata: Metadata = {
   title: "Claudio Souza — Product Designer",
   description:
     "Portfólio de Claudio Souza, Product Designer especializado em UX/UI, Design Systems e e-commerce. São Paulo, Brasil.",
+  openGraph: {
+    title: "Claudio Souza — Product Designer",
+    description:
+      "Portfólio de Claudio Souza, Product Designer especializado em UX/UI, Design Systems e e-commerce.",
+    url: "https://portfolio-claudio-five.vercel.app",
+    siteName: "Claudio Souza",
+    images: [
+      {
+        url: "https://portfolio-claudio-five.vercel.app/claudio-souza.png",
+        width: 1536,
+        height: 1956,
+        alt: "Claudio Souza — Product Designer",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claudio Souza — Product Designer",
+    description:
+      "Portfólio de Claudio Souza, Product Designer especializado em UX/UI, Design Systems e e-commerce.",
+    images: ["https://portfolio-claudio-five.vercel.app/claudio-souza.png"],
+  },
 }
 
 export default function RootLayout({
