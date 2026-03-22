@@ -90,6 +90,56 @@ export const cases: Case[] = [
     ],
   },
   {
+    slug: "forcecoffe",
+    title: "Redesign Estratégico do E-commerce Force Coffee.",
+    subtitle: "Redesign completo de um e-commerce de bebida energética premium para elevar conversão e comunicar naturalidade.",
+    empresa: "Force Coffee",
+    ano: "2024",
+    role: "Designer UX/UI",
+    ferramentas: ["Figma", "Tray E-commerce"],
+    tags: ["UX Research", "UI Design", "E-commerce", "Benchmark"],
+    cover: "/cases/forcecoffe-cover.png",
+    contexto: "A Force Coffee é uma bebida energética premium com 11 super ingredientes naturais. O e-commerce existente acumulava problemas de clareza na comunicação do produto e uma experiência de compra confusa — com paleta escura e institucional que contradiz diretamente o posicionamento '100% natural' da marca.",
+    problema: "O site antigo não respondia às perguntas fundamentais do usuário: o que é esse produto, quais são seus benefícios e por que comprá-lo. A identidade visual pesada e a arquitetura de informação fraca geravam abandono antes mesmo do usuário chegar à página de produto ou ao checkout.",
+    processo: [
+      {
+        numero: "01",
+        titulo: "Análise Heurística",
+        descricao: "Mapeamento dos principais problemas de usabilidade e comunicação no site existente, identificando barreiras à conversão e pontos críticos da jornada de compra.",
+      },
+      {
+        numero: "02",
+        titulo: "Benchmark Competitivo",
+        descricao: "Pesquisa com concorrentes de lifestyle e health food que apontou a necessidade urgente de abandonar a paleta escura e adotar uma identidade mais leve, orgânica e alinhada ao produto.",
+      },
+      {
+        numero: "03",
+        titulo: "Redesign & Entrega",
+        descricao: "Reestruturação completa de Home, Catálogo e Produto com nova paleta orgânica, copy orientado a benefícios, prova social em destaque e CTA otimizado para conversão.",
+      },
+    ],
+    solucao: "Redesign completo das páginas Home, Catálogo e Produto com foco em conversão: nova paleta orgânica (bege, off-white e tons de terra) alinhada ao posicionamento '100% natural', arquitetura da informação que comunica os 11 super ingredientes e benefícios de performance de forma imediata, seção de prova social e time de embaixadores, e jornada de compra simplificada até o checkout.",
+    metricas: [
+      { valor: "3", descricao: "Páginas redesenhadas (Home, Catálogo e Produto)" },
+      { valor: "11", descricao: "Super ingredientes comunicados na nova arquitetura" },
+      { valor: "100%", descricao: "Alinhamento visual com o posicionamento natural da marca" },
+    ],
+    aprendizados: [
+      {
+        titulo: "Paleta de cores é posicionamento, não estética.",
+        descricao: "A troca do fundo escuro para tons orgânicos não foi apenas visual — foi o alinhamento da interface com a promessa '100% natural' da marca. Design e estratégia precisam falar a mesma língua.",
+      },
+      {
+        titulo: "O usuário decide em segundos: clareza é conversão.",
+        descricao: "A nova Home foi desenhada para responder imediatamente: o que é o produto, quais são os benefícios e por que comprar. Arquitetura de informação bem feita reduz fricção sem precisar de mais conteúdo.",
+      },
+      {
+        titulo: "Benchmark não é cópia — é calibração de expectativas.",
+        descricao: "Analisar concorrentes de lifestyle e health food ajudou a entender o padrão visual que o público já espera. A pesquisa justificou cada decisão de redesign perante o cliente.",
+      },
+    ],
+  },
+  {
     slug: "marcon",
     title: "Portal do Representante Marcon.",
     subtitle: "Criação de um portal exclusivo que transformou representantes dependentes em autônomos, do zero ao resultado em produção.",
