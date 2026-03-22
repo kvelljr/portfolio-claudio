@@ -94,7 +94,7 @@ export const cases: Case[] = [
     title: "Redesign Estratégico do E-commerce Force Coffee.",
     subtitle: "Redesign completo de um e-commerce de bebida energética premium para elevar conversão e comunicar naturalidade.",
     empresa: "Force Coffee",
-    ano: "2024",
+    ano: "2025",
     role: "Designer UX/UI",
     ferramentas: ["Figma", "Tray E-commerce"],
     tags: ["UX Research", "UI Design", "E-commerce", "Benchmark"],

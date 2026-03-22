@@ -12,7 +12,7 @@ export default function CaseCard({ caso }: { caso: Case }) {
   return (
     <Link
       href={`/cases/${caso.slug}`}
-      style={{ textDecoration: "none" }}
+      style={{ textDecoration: "none", display: "flex", height: "100%" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -25,6 +25,9 @@ export default function CaseCard({ caso }: { caso: Case }) {
           transition: "border-color 0.2s ease, box-shadow 0.2s ease",
           borderColor: hovered ? "#BBBBBB" : "#E5E5E3",
           boxShadow: hovered ? "0 4px 24px rgba(0,0,0,0.06)" : "none",
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
         }}
       >
         {/* Cover image */}
@@ -43,7 +46,7 @@ export default function CaseCard({ caso }: { caso: Case }) {
         </div>
 
         {/* Content */}
-        <div style={{ padding: "24px" }}>
+        <div style={{ padding: "24px", display: "flex", flexDirection: "column", flex: 1 }}>
           <div style={{ display: "flex", gap: "6px", marginBottom: "12px", flexWrap: "wrap" }}>
             {caso.tags.map((tag) => (
               <Tag key={tag} label={tag} />
@@ -70,12 +73,17 @@ export default function CaseCard({ caso }: { caso: Case }) {
               color: "#777777",
               margin: "0 0 16px",
               lineHeight: "1.5",
+              flex: 1,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {caso.subtitle}
           </p>
 
-          <div style={{ display: "flex", gap: "16px" }}>
+          <div style={{ display: "flex", gap: "16px", marginTop: "auto" }}>
             <span style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "12px", color: "#AAAAAA" }}>
               {caso.ano}
             </span>
