@@ -76,15 +76,16 @@ export default function SobreModal() {
             backgroundColor: "rgba(0,0,0,0.5)",
             zIndex: 1000,
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
             padding: "24px",
+            overflowY: "auto",
           }}
         >
           {/* Modal wrapper — stop propagation */}
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{ position: "relative", width: "100%", maxWidth: "920px" }}
+            style={{ position: "relative", width: "100%", maxWidth: "920px", margin: "auto 0", paddingTop: "8px" }}
           >
             {/* X Button */}
             <div style={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
@@ -122,8 +123,7 @@ export default function SobreModal() {
                 gridTemplateColumns: "1fr 1fr",
                 gridTemplateRows: "auto auto",
                 gap: "8px",
-                maxHeight: "88vh",
-                overflowY: "auto",
+                overflowY: "visible",
               }}
             >
               {/* ── Card 1: Sobre mim ── */}
