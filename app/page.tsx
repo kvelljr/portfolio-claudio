@@ -19,146 +19,158 @@ export default function Home() {
     <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
 
       {/* ── HERO ── */}
-      <section style={{ paddingTop: "60px", paddingBottom: "72px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "48px", flexWrap: "wrap" }}>
+      <section style={{ paddingTop: "40px", paddingBottom: "24px" }}>
+        {/* Card branco */}
+        <div style={{
+          backgroundColor: "#FFFFFF",
+          border: "1px solid #E5E5E3",
+          borderRadius: "20px",
+          padding: "32px 36px",
+          position: "relative",
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "24px" }}>
 
-          {/* Conteúdo — order 1 */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", flex: "1 1 400px" }}>
+            {/* Conteúdo esquerda */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "18px", flex: 1 }}>
 
-            {/* Badge label */}
-            <span style={{
-              display: "inline-block",
-              alignSelf: "flex-start",
-              backgroundColor: "#CCFF00",
-              color: "#111111",
-              fontFamily: "var(--font-inter), sans-serif",
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.06em",
-              borderRadius: "999px",
-              padding: "3px 12px",
-            }}>
-              PRODUCT DESIGNER
-            </span>
+              {/* Badge */}
+              <span style={{
+                display: "inline-block",
+                alignSelf: "flex-start",
+                backgroundColor: "#CCFF00",
+                color: "#111111",
+                fontFamily: "var(--font-inter), sans-serif",
+                fontSize: "11px",
+                fontWeight: 700,
+                letterSpacing: "0.06em",
+                borderRadius: "999px",
+                padding: "3px 12px",
+              }}>
+                PRODUCT DESIGNER
+              </span>
 
-            {/* H1 */}
-            <h1 style={{
-              fontFamily: "var(--font-inter), sans-serif",
-              fontWeight: 700,
-              fontSize: "42px",
-              color: "#111111",
-              lineHeight: "1.2",
-              letterSpacing: "-0.02em",
-              margin: 0,
-            }}>
-              End-to-end, do discovery ao handoff.
-            </h1>
+              {/* H1 */}
+              <h1 style={{
+                fontFamily: "var(--font-inter), sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(32px, 4vw, 48px)",
+                color: "#111111",
+                lineHeight: "1.15",
+                letterSpacing: "-0.02em",
+                margin: 0,
+              }}>
+                End-to-end,<br />
+                do discovery<br />
+                ao handoff.
+              </h1>
 
-            {/* Parágrafo */}
-            <p style={{
-              fontFamily: "var(--font-inter), sans-serif",
-              fontSize: "15px",
-              color: "#666666",
-              lineHeight: "1.6",
-              margin: 0,
-            }}>
-              Especialista em e-commerce (VTEX · Shopify · Nuvemshop) e SaaS. Conduzo pesquisa com usuários, prototipo fluxos de alta fidelidade e entrego handoff que move métricas.
-            </p>
+              {/* Parágrafo */}
+              <p style={{
+                fontFamily: "var(--font-inter), sans-serif",
+                fontSize: "15px",
+                color: "#666666",
+                lineHeight: "1.6",
+                margin: 0,
+                maxWidth: "420px",
+              }}>
+                E-commerce (VTEX · Shopify · Nuvemshop) e SaaS.<br />
+                Pesquisa, prototipagem e handoff que movem métricas.
+              </p>
 
-            {/* Stat cards */}
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              {[
-                { num: "25%", label: "redução em tarefas críticas" },
-                { num: "90%", label: "sucesso em usabilidade" },
-                { num: "4+",  label: "anos em e-commerce" },
-              ].map(({ num, label }) => (
-                <div key={num} style={{
-                  backgroundColor: "#F5F5F3",
-                  borderRadius: "10px",
-                  padding: "12px 16px",
-                  minWidth: "100px",
-                }}>
-                  <p style={{
+              {/* Stat cards */}
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                {[
+                  { num: "25%", label: "redução em tarefas críticas" },
+                  { num: "90%", label: "sucesso em usabilidade" },
+                  { num: "4+",  label: "anos em e-commerce" },
+                ].map(({ num, label }) => (
+                  <div key={num} style={{
+                    backgroundColor: "#F5F5F3",
+                    borderRadius: "10px",
+                    padding: "12px 16px",
+                    minWidth: "110px",
+                  }}>
+                    <p style={{
+                      fontFamily: "var(--font-inter), sans-serif",
+                      fontSize: "26px",
+                      fontWeight: 700,
+                      color: "#111111",
+                      margin: 0,
+                      lineHeight: 1,
+                    }}>{num}</p>
+                    <p style={{
+                      fontFamily: "var(--font-inter), sans-serif",
+                      fontSize: "11px",
+                      color: "#999999",
+                      margin: "4px 0 0",
+                      lineHeight: 1.4,
+                    }}>{label}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTAs */}
+              <div style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
+                <Link
+                  href="/#trabalhos"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    backgroundColor: "#111111",
+                    color: "#FFFFFF",
                     fontFamily: "var(--font-inter), sans-serif",
-                    fontSize: "28px",
-                    fontWeight: 700,
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    padding: "10px 22px",
+                    borderRadius: "999px",
+                    textDecoration: "none",
+                  }}
+                >
+                  Ver cases →
+                </Link>
+                <Link
+                  href="https://linkedin.com/in/claudiojuniorkv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    backgroundColor: "transparent",
                     color: "#111111",
-                    margin: 0,
-                    lineHeight: 1,
-                  }}>{num}</p>
-                  <p style={{
                     fontFamily: "var(--font-inter), sans-serif",
-                    fontSize: "12px",
-                    color: "#888888",
-                    margin: "4px 0 0",
-                    lineHeight: 1.4,
-                  }}>{label}</p>
-                </div>
-              ))}
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    padding: "9px 22px",
+                    borderRadius: "999px",
+                    border: "1px solid #111111",
+                    textDecoration: "none",
+                  }}
+                >
+                  LinkedIn
+                </Link>
+              </div>
             </div>
 
-            {/* CTAs */}
-            <div style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
-              <Link
-                href="/#trabalhos"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  backgroundColor: "#111111",
-                  color: "#FFFFFF",
-                  fontFamily: "var(--font-inter), sans-serif",
-                  fontWeight: 500,
-                  fontSize: "14px",
-                  padding: "10px 22px",
-                  borderRadius: "999px",
-                  textDecoration: "none",
-                }}
-              >
-                Ver cases →
-              </Link>
-              <Link
-                href="https://linkedin.com/in/claudiojuniorkv"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  backgroundColor: "transparent",
-                  color: "#111111",
-                  fontFamily: "var(--font-inter), sans-serif",
-                  fontWeight: 500,
-                  fontSize: "14px",
-                  padding: "9px 22px",
-                  borderRadius: "999px",
-                  border: "1px solid #111111",
-                  textDecoration: "none",
-                }}
-              >
-                LinkedIn
-              </Link>
+            {/* Foto — canto superior direito */}
+            <div style={{
+              flexShrink: 0,
+              width: "130px",
+              aspectRatio: "4/5",
+              borderRadius: "14px",
+              overflow: "hidden",
+              border: "1px solid #E5E5E3",
+            }}>
+              <Image
+                src="/claudio-souza.png"
+                alt="Claudio Souza | Product Designer"
+                width={130}
+                height={163}
+                style={{ objectFit: "cover", objectPosition: "top center", width: "100%", height: "100%" }}
+                priority
+              />
             </div>
-          </div>
 
-          {/* Foto — order 2, lado direito */}
-          <div style={{
-            flex: "0 0 140px",
-            width: "140px",
-            aspectRatio: "9/16",
-            borderRadius: "14px",
-            overflow: "hidden",
-            border: "1px solid #E5E5E3",
-            alignSelf: "center",
-          }}>
-            <Image
-              src="/claudio-souza.png"
-              alt="Claudio Souza | Product Designer"
-              width={140}
-              height={249}
-              style={{ objectFit: "cover", objectPosition: "top center", width: "100%", height: "100%" }}
-              priority
-            />
           </div>
-
         </div>
       </section>
 
