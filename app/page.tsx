@@ -38,17 +38,17 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: "var(--font-inter), sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(28px, 3.2vw, 40px)",
+                fontWeight: 400,
+                fontSize: "clamp(30px, 3.4vw, 44px)",
                 color: "#111111",
-                lineHeight: "1.3",
-                letterSpacing: "-0.01em",
+                lineHeight: "1.25",
+                letterSpacing: "-0.02em",
                 margin: 0,
               }}
             >
               <span style={{ fontWeight: 700 }}>Olá, sou o Cláudio.</span><br />
-              Product Designer focado em<br />
-              e-commerce e produtos SaaS.
+              Product Designer end-to-end,<br />
+              do discovery ao handoff.
             </h1>
 
             <p
@@ -60,9 +60,9 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Projeto produtos digitais end-to-end: discovery, pesquisa com usuários,
-              prototipagem de alta fidelidade e handoff para engenharia. Experiência
-              em VTEX, Shopify, Nuvemshop, Tray, Wake e Magazord.
+              Conduzo pesquisa com usuários, prototipo fluxos de alta fidelidade
+              e colaboro com produto e engenharia para entregar experiências
+              que resolvem problemas reais — e movem métricas.
             </p>
 
             {/* Badges */}
