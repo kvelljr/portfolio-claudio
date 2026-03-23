@@ -3,6 +3,7 @@
 import Link from "next/link"
 import SobreModal from "./SobreModal"
 import ContatoModal from "./ContatoModal"
+import CasesModal from "./CasesModal"
 
 export default function Nav() {
   return (
@@ -57,7 +58,7 @@ export default function Nav() {
           gap: "32px",
           alignItems: "center",
         }}>
-          <NavLink href="/#trabalhos">Cases</NavLink>
+          <CasesModal label="Cases" />
           <SobreModal label="Sobre" />
         </div>
 

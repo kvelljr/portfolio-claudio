@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import CaseCard from "@/components/CaseCard"
+import CasesModal from "@/components/CasesModal"
 import { cases } from "@/lib/cases"
 
 const badges = [
@@ -111,23 +112,7 @@ export default function Home() {
 
               {/* CTAs */}
               <div style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
-                <Link
-                  href="/#trabalhos"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    backgroundColor: "#111111",
-                    color: "#FFFFFF",
-                    fontFamily: "var(--font-inter), sans-serif",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                    padding: "10px 22px",
-                    borderRadius: "999px",
-                    textDecoration: "none",
-                  }}
-                >
-                  Ver cases →
-                </Link>
+                <CasesModal label="Ver cases →" variant="primary" />
                 <Link
                   href="https://linkedin.com/in/claudiojuniorkv"
                   target="_blank"
