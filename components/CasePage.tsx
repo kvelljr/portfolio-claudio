@@ -160,6 +160,30 @@ export default function CasePage({ caso }: { caso: Case }) {
           <p style={bodyStyle}>{caso.solucao}</p>
         </Section>
 
+        {/* Protótipo Figma */}
+        {caso.figmaEmbed && (
+          <>
+            <Divider />
+            <Section label="Protótipo interativo">
+              <div style={{
+                borderRadius: "16px",
+                overflow: "hidden",
+                border: "1px solid #E5E5E3",
+                backgroundColor: "#F5F5F3",
+                lineHeight: 0,
+              }}>
+                <iframe
+                  src={caso.figmaEmbed}
+                  width="100%"
+                  height="600"
+                  style={{ border: "none", display: "block" }}
+                  allowFullScreen
+                />
+              </div>
+            </Section>
+          </>
+        )}
+
         {/* Galeria de imagens */}
         {caso.imagens && caso.imagens.length > 0 && (
           <>

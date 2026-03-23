@@ -25,6 +25,7 @@ export type Case = {
   processo: ProcessoItem[]
   solucao: string
   imagens?: string[]
+  figmaEmbed?: string
   metricas: Metrica[]
   resultadosBullets: string[]
   aprendizados: Aprendizado[]
@@ -274,6 +275,86 @@ export const cases: Case[] = [
       {
         titulo: "Onboarding não é feature, é parte do produto.",
         descricao: "Guiar o usuário no primeiro uso define se ele volta ou abandona. Scaffolding bem pensado foi o que garantiu adoção real por representantes com diferentes níveis de familiaridade digital.",
+      },
+    ],
+  },
+  {
+    slug: "glamory",
+    title: "Glamory: e-commerce premium de moda no VTEX IO.",
+    subtitle: "Redesign completo de uma loja de moda premium na plataforma VTEX IO, com foco em experiência de compra fluida, identidade visual sofisticada e conversão.",
+    empresa: "Glamory",
+    ano: "2025",
+    role: "UX/UI Designer",
+    ferramentas: ["Figma", "VTEX IO", "FigJam", "Hotjar"],
+    tags: ["UX/UI Design", "E-commerce", "VTEX", "Fashion"],
+    cover: "/cases/glamory-cover.png",
+    contexto: "A Glamory é uma marca de moda premium que buscava uma presença digital à altura do seu posicionamento. A loja existente não refletia a sofisticação da marca: layout genérico, hierarquia visual fraca e uma jornada de compra que não gerava confiança no produto.\n\nO desafio era criar uma experiência de compra que comunicasse exclusividade desde o primeiro acesso, facilitasse a navegação pelo catálogo e convertesse visitantes em compradores, respeitando as limitações e oportunidades da plataforma VTEX IO.\n\nAtuei como UX/UI Designer responsável pelo redesign completo, da arquitetura de informação ao protótipo de alta fidelidade entregue para o time de desenvolvimento.",
+    desafios: [
+      "Interface anterior não refletia o posicionamento premium da marca",
+      "Navegação confusa dificultava a descoberta de produtos no catálogo",
+      "Jornada de compra com fricção excessiva entre vitrine e checkout",
+      "Falta de consistência visual entre as páginas da loja",
+      "Necessidade de adaptar o design às restrições técnicas do VTEX IO",
+    ],
+    meuPapel: {
+      intro: "Responsável pelo redesign end-to-end da loja Glamory no VTEX IO, da arquitetura de informação até o handoff para desenvolvimento.",
+      atividades: [
+        "Mapeamento da jornada de compra e identificação de pontos de atrito",
+        "Benchmark de referências premium nacionais e internacionais de moda",
+        "Criação da arquitetura de informação e fluxos de navegação",
+        "Design de alta fidelidade no Figma com sistema de componentes VTEX IO",
+        "Prototipagem interativa e handoff para o time de desenvolvimento",
+      ],
+    },
+    abordagem: "O projeto começou com um benchmark aprofundado de marcas de moda premium, identificando os padrões visuais e de UX que constroem confiança e desejo nesse segmento. Em paralelo, mapeei a jornada atual da loja para localizar os pontos exatos de abandono. A partir disso, cada decisão de design foi orientada por dois objetivos: fortalecer a identidade da marca e eliminar qualquer fricção no caminho até o checkout.",
+    processo: [
+      {
+        numero: "01",
+        titulo: "Benchmark",
+        descricao: "Análise de referências premium de moda (nacional e internacional) para identificar padrões de UX que constroem desejo e confiança no segmento.",
+      },
+      {
+        numero: "02",
+        titulo: "Arquitetura",
+        descricao: "Reestruturação da navegação, categorias e hierarquia de informação para facilitar a descoberta de produtos e reduzir o caminho até o checkout.",
+      },
+      {
+        numero: "03",
+        titulo: "Design System",
+        descricao: "Criação de um sistema de componentes alinhado à identidade Glamory, adaptado às especificidades técnicas do VTEX IO.",
+      },
+      {
+        numero: "04",
+        titulo: "Prototipagem",
+        descricao: "Protótipo interativo de alta fidelidade no Figma cobrindo home, PLP, PDP e fluxo de checkout, com handoff completo para desenvolvimento.",
+      },
+    ],
+    solucao: "Redesign completo da loja Glamory no VTEX IO com nova arquitetura de navegação, identidade visual sofisticada e jornada de compra simplificada. A solução inclui home editorial com destaque para coleções, PLP com filtros aprimorados, PDP com foco em conversão e fluxo de checkout otimizado para reduzir abandono.",
+    figmaEmbed: "https://embed.figma.com/proto/D0Nrp6mlS3yeI9PQq3k6wD/GLAMORY---VTEX-IO--Copy-?page-id=0%3A1&node-id=3-2&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3%3A2&show-proto-sidebar=1&embed-host=share",
+    metricas: [
+      { valor: "VTEX IO", descricao: "plataforma de entrega" },
+      { valor: "100%", descricao: "fidelidade no protótipo" },
+      { valor: "4", descricao: "etapas do processo" },
+      { valor: "2025", descricao: "ano de entrega" },
+    ],
+    resultadosBullets: [
+      "Identidade premium traduzida em interface coerente do início ao fim",
+      "Jornada de compra simplificada com menos etapas até o checkout",
+      "Sistema de componentes escalável para futuras expansões da loja",
+      "Protótipo interativo aprovado pelo cliente antes do desenvolvimento",
+    ],
+    aprendizados: [
+      {
+        titulo: "Restrição técnica não é obstáculo, é contexto de design.",
+        descricao: "Trabalhar dentro das limitações do VTEX IO exigiu criatividade para entregar sofisticação visual sem comprometer a viabilidade de implementação.",
+      },
+      {
+        titulo: "Posicionamento de marca começa pela tipografia e pelo espaçamento.",
+        descricao: "No segmento premium, o que transmite exclusividade muitas vezes não é o elemento mais elaborado, mas o mais refinado: espaços maiores, hierarquia clara e menos ruído visual.",
+      },
+      {
+        titulo: "Protótipo interativo acelera aprovação e reduz retrabalho.",
+        descricao: "Entregar um protótipo navegável no Figma antes do desenvolvimento permitiu alinhar expectativas com o cliente e corrigir decisões antes de qualquer linha de código.",
       },
     ],
   },
