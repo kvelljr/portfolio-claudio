@@ -225,7 +225,7 @@ export default function ContatoModal() {
                   Local
                 </p>
                 <p style={{ fontFamily: font, fontWeight: 500, fontSize: "16px", color: "#111111", margin: 0 }}>
-                  São Paulo, Brasil — remoto
+                  São Paulo, Brasil · remoto
                 </p>
               </div>
             </div>

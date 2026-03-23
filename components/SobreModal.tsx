@@ -169,7 +169,7 @@ export default function SobreModal() {
                     Product Designer com 4+ anos projetando e-commerce e SaaS. Reduzi 25%
                     o tempo de conclusão em fluxos críticos e alcancei 90% de sucesso em
                     testes de usabilidade. Trabalhei em VTEX, Shopify, Nuvemshop, Tray,
-                    Wake e Magazord — sempre operando end-to-end: discovery, pesquisa,
+                    Wake e Magazord, sempre operando end-to-end: discovery, pesquisa,
                     prototipagem e handoff para engenharia.
                   </p>
                 </div>

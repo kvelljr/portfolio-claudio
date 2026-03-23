@@ -177,7 +177,7 @@ export default function CasePage({ caso }: { caso: Case }) {
                 >
                   <Image
                     src={src}
-                    alt={`${caso.title} — imagem ${i + 1}`}
+                    alt={`${caso.title} imagem ${i + 1}`}
                     width={1200}
                     height={750}
                     style={{ width: "100%", height: "auto", display: "block" }}

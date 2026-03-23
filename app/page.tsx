@@ -25,7 +25,7 @@ export default function Home() {
           <div className="hero-photo">
             <Image
               src="/claudio-souza.png"
-              alt="Claudio Souza — Product Designer"
+              alt="Claudio Souza | Product Designer"
               width={220}
               height={391}
               style={{ objectFit: "cover", objectPosition: "top center", width: "100%", height: "100%" }}
@@ -62,7 +62,7 @@ export default function Home() {
             >
               Conduzo pesquisa com usuários, prototipo fluxos de alta fidelidade
               e colaboro com produto e engenharia para entregar experiências
-              que resolvem problemas reais — e movem métricas.
+              que resolvem problemas reais e movem métricas.
             </p>
 
             {/* Badges */}
