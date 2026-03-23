@@ -12,8 +12,7 @@ export default function Nav() {
         top: 0,
         zIndex: 50,
         borderBottom: "1px solid #E5E5E3",
-        backgroundColor: "rgba(255, 255, 255, 0.9)",
-        backdropFilter: "blur(12px)",
+        backgroundColor: "#FFFFFF",
       }}
     >
       <div
