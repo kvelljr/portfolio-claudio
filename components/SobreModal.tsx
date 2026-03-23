@@ -41,7 +41,7 @@ const experiencias = [
   },
 ]
 
-export default function SobreModal() {
+export default function SobreModal({ label = "sobre mim" }: { label?: string }) {
   const [open, setOpen] = useState(false)
   const [habAtual, setHabAtual] = useState(0)
   const [mounted, setMounted] = useState(false)
@@ -68,7 +68,7 @@ export default function SobreModal() {
         onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#111111")}
         onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#777777")}
       >
-        sobre mim
+        {label}
       </button>
 
       {/* Overlay — renderizado via portal no body para escapar do backdrop-filter do Nav */}

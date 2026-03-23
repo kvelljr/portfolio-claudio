@@ -13,6 +13,7 @@ export default function Nav() {
         zIndex: 50,
         borderBottom: "1px solid #E5E5E3",
         backgroundColor: "#FFFFFF",
+        position: "relative" as const,
       }}
     >
       <div
@@ -47,11 +48,21 @@ export default function Nav() {
           CS
         </Link>
 
-        <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
-          <NavLink href="/#trabalhos">trabalhos</NavLink>
-          <SobreModal />
-          <ContatoModal />
+        {/* Links centrados */}
+        <div style={{
+          position: "absolute",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: "32px",
+          alignItems: "center",
+        }}>
+          <NavLink href="/#trabalhos">Cases</NavLink>
+          <SobreModal label="Sobre" />
         </div>
+
+        {/* Contato à direita */}
+        <ContatoModal />
       </div>
     </nav>
   )
