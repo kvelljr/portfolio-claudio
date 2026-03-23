@@ -11,6 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   title: "Claudio Souza | Product Designer",
   description:
     "Portfólio de Claudio Souza, Product Designer especializado em UX/UI, Design Systems e e-commerce. São Paulo, Brasil.",
