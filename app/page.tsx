@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import CaseCard from "@/components/CaseCard"
 import CasesModal from "@/components/CasesModal"
+import CasesCarousel from "@/components/CasesCarousel"
 import { cases } from "@/lib/cases"
 
 const badges = [
@@ -174,18 +175,7 @@ export default function Home() {
         >
           Trabalhos selecionados
         </p>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "24px",
-          }}
-        >
-          {cases.map((caso) => (
-            <CaseCard key={caso.slug} caso={caso} />
-          ))}
-        </div>
+        <CasesCarousel casos={cases} />
       </section>
 
       {/* ── EXPERIÊNCIA ── */}

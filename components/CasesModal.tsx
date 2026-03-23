@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
-import Link from "next/link"
-import Image from "next/image"
-import Tag from "./Tag"
+import CasesCarousel from "./CasesCarousel"
 import { cases } from "@/lib/cases"
 
 export default function CasesModal({ label = "Cases", variant = "nav" }: { label?: string; variant?: "nav" | "primary" }) {
@@ -123,99 +121,8 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
                 </h2>
               </div>
 
-              {/* Cases — scroll horizontal */}
-              <div style={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "12px",
-                overflowX: "auto",
-                paddingBottom: "8px",
-                scrollSnapType: "x mandatory",
-                msOverflowStyle: "none",
-                scrollbarWidth: "none",
-              }}>
-                {cases.map((caso) => (
-                  <Link
-                    key={caso.slug}
-                    href={`/cases/${caso.slug}`}
-                    onClick={() => setOpen(false)}
-                    style={{ textDecoration: "none", flexShrink: 0, scrollSnapAlign: "start" }}
-                  >
-                    <div style={{
-                      backgroundColor: "#FFFFFF",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "260px",
-                      transition: "box-shadow 0.2s ease",
-                      cursor: "pointer",
-                    }}
-                      onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.07)"}
-                      onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.boxShadow = "none"}
-                    >
-                      {/* Thumb */}
-                      <div style={{
-                        width: "100%",
-                        aspectRatio: "16/9",
-                        position: "relative",
-                        overflow: "hidden",
-                      }}>
-                        <Image
-                          src={caso.cover}
-                          alt={caso.title}
-                          fill
-                          style={{ objectFit: "cover", objectPosition: "top" }}
-                        />
-                      </div>
-
-                      {/* Info */}
-                      <div style={{
-                        padding: "16px",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "8px",
-                      }}>
-                        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
-                          {caso.tags.map((tag) => (
-                            <Tag key={tag} label={tag} />
-                          ))}
-                        </div>
-
-                        <p style={{
-                          fontFamily: font,
-                          fontWeight: 700,
-                          fontSize: "15px",
-                          color: "#111111",
-                          margin: 0,
-                          lineHeight: 1.3,
-                        }}>
-                          {caso.title}
-                        </p>
-
-                        <p style={{
-                          fontFamily: font,
-                          fontSize: "13px",
-                          color: "#777777",
-                          margin: 0,
-                          lineHeight: 1.5,
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                        }}>
-                          {caso.subtitle}
-                        </p>
-
-                        <div style={{ display: "flex", gap: "14px" }}>
-                          <span style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA" }}>{caso.ano}</span>
-                          <span style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA" }}>{caso.role}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+              {/* Cases — carousel */}
+              <CasesCarousel casos={cases} />
             </div>
           </div>
         </div>,
