@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { Case } from "@/lib/cases"
+import { Gallery4 } from "@/components/ui/gallery4"
 import { cases } from "@/lib/cases"
 
 export default function CasePage({ caso }: { caso: Case }) {
@@ -188,27 +189,15 @@ export default function CasePage({ caso }: { caso: Case }) {
         {caso.imagens && caso.imagens.length > 0 && (
           <>
             <Divider />
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {caso.imagens.map((src, i) => (
-                <div
-                  key={i}
-                  style={{
-                    borderRadius: "16px",
-                    overflow: "hidden",
-                    backgroundColor: "#F5F5F3",
-                    lineHeight: 0,
-                  }}
-                >
-                  <Image
-                    src={src}
-                    alt={`${caso.title} imagem ${i + 1}`}
-                    width={1200}
-                    height={750}
-                    style={{ width: "100%", height: "auto", display: "block" }}
-                  />
-                </div>
-              ))}
-            </div>
+            <Section label="Imagens do projeto">
+              <Gallery4
+                items={caso.imagens.map((src, i) => ({
+                  id: String(i),
+                  image: src,
+                  alt: `${caso.title} imagem ${i + 1}`,
+                }))}
+              />
+            </Section>
           </>
         )}
 
