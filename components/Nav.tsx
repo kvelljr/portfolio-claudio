@@ -13,7 +13,6 @@ export default function Nav() {
         zIndex: 50,
         borderBottom: "1px solid #E5E5E3",
         backgroundColor: "#FFFFFF",
-        position: "relative" as const,
       }}
     >
       <div
@@ -25,6 +24,7 @@ export default function Nav() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          position: "relative",
         }}
       >
         <Link
