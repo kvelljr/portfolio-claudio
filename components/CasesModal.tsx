@@ -123,21 +123,31 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
                 </h2>
               </div>
 
-              {/* Cases — lista linear */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              {/* Cases — scroll horizontal */}
+              <div style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "12px",
+                overflowX: "auto",
+                paddingBottom: "8px",
+                scrollSnapType: "x mandatory",
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}>
                 {cases.map((caso) => (
                   <Link
                     key={caso.slug}
                     href={`/cases/${caso.slug}`}
                     onClick={() => setOpen(false)}
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: "none", flexShrink: 0, scrollSnapAlign: "start" }}
                   >
                     <div style={{
                       backgroundColor: "#FFFFFF",
                       borderRadius: "16px",
                       overflow: "hidden",
                       display: "flex",
-                      flexDirection: "row",
+                      flexDirection: "column",
+                      width: "260px",
                       transition: "box-shadow 0.2s ease",
                       cursor: "pointer",
                     }}
@@ -146,8 +156,7 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
                     >
                       {/* Thumb */}
                       <div style={{
-                        flexShrink: 0,
-                        width: "180px",
+                        width: "100%",
                         aspectRatio: "16/9",
                         position: "relative",
                         overflow: "hidden",
@@ -162,12 +171,10 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
 
                       {/* Info */}
                       <div style={{
-                        padding: "20px 24px",
+                        padding: "16px",
                         display: "flex",
                         flexDirection: "column",
-                        justifyContent: "center",
                         gap: "8px",
-                        flex: 1,
                       }}>
                         <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
                           {caso.tags.map((tag) => (
@@ -178,7 +185,7 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
                         <p style={{
                           fontFamily: font,
                           fontWeight: 700,
-                          fontSize: "17px",
+                          fontSize: "15px",
                           color: "#111111",
                           margin: 0,
                           lineHeight: 1.3,
@@ -201,21 +208,9 @@ export default function CasesModal({ label = "Cases", variant = "nav" }: { label
                         </p>
 
                         <div style={{ display: "flex", gap: "14px" }}>
-                          <span style={{ fontFamily: font, fontSize: "12px", color: "#AAAAAA" }}>{caso.ano}</span>
-                          <span style={{ fontFamily: font, fontSize: "12px", color: "#AAAAAA" }}>{caso.role}</span>
+                          <span style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA" }}>{caso.ano}</span>
+                          <span style={{ fontFamily: font, fontSize: "11px", color: "#AAAAAA" }}>{caso.role}</span>
                         </div>
-                      </div>
-
-                      {/* Seta */}
-                      <div style={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingRight: "24px",
-                        color: "#CCCCCC",
-                        fontSize: "20px",
-                        flexShrink: 0,
-                      }}>
-                        →
                       </div>
                     </div>
                   </Link>
