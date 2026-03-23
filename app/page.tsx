@@ -4,12 +4,15 @@ import CaseCard from "@/components/CaseCard"
 import { cases } from "@/lib/cases"
 
 const badges = [
-  "+4 anos em Product Design",
-  "Experiência em e-commerce e SaaS — VTEX, Shopify, Nuvemshop",
-  "Projetos com impacto direto em conversão e experiência do usuário",
+  "4+ anos projetando e-commerce e produtos SaaS",
+  "25% de redução no tempo de conclusão em fluxos críticos",
+  "90% de sucesso em testes de usabilidade com usuários reais",
 ]
 
-const ferramentas = ["Figma", "FigJam", "Miro", "Notion", "Maze / Useberry", "ChatGPT / IA"]
+const ferramentas = [
+  "Figma", "FigJam", "Miro", "Hotjar", "Microsoft Clarity",
+  "Google Analytics", "Notion", "Zeplin",
+]
 
 export default function Home() {
   return (
@@ -57,9 +60,9 @@ export default function Home() {
                 margin: 0,
               }}
             >
-              Projeto produtos digitais conectando pesquisa, interface e resultado real.
-              Do discovery ao handoff, com atenção à experiência do usuário e aos
-              objetivos do negócio.
+              Projeto produtos digitais end-to-end: discovery, pesquisa com usuários,
+              prototipagem de alta fidelidade e handoff para engenharia. Experiência
+              em VTEX, Shopify, Nuvemshop, Tray, Wake e Magazord.
             </p>
 
             {/* Badges */}
@@ -159,7 +162,7 @@ export default function Home() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <ExperienceItem
             empresa="RockFly Performance"
-            cargo="Designer UX/UI"
+            cargo="Product Designer"
             periodo="mar. 2024 – jan. 2026"
             local="Marília, SP"
           />

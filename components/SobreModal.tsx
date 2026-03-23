@@ -9,29 +9,29 @@ const habilidades = [
   {
     titulo: "Product Design",
     descricao:
-      "Criação de interfaces digitais com foco em usabilidade, hierarquia visual e consistência de experiência do usuário.",
+      "Design end-to-end: do discovery ao handoff. Interfaces com foco em usabilidade, hierarquia visual e resultados mensuráveis para o negócio.",
   },
   {
     titulo: "UX Research",
     descricao:
-      "Condução de entrevistas, testes de usabilidade e análise de comportamento para embasar decisões de design.",
+      "Entrevistas qualitativas, testes de usabilidade, análise comportamental com Hotjar e Clarity, e testes A/B para embasar decisões com evidências.",
+  },
+  {
+    titulo: "Arquitetura de Informação",
+    descricao:
+      "Mapeamento de fluxos, aplicação de JTBD e Double Diamond para eliminar pontos de abandono e aumentar a eficiência das jornadas B2B e B2C.",
   },
   {
     titulo: "Design Systems",
     descricao:
-      "Construção de bibliotecas de componentes escaláveis que agilizam o desenvolvimento e garantem consistência.",
-  },
-  {
-    titulo: "Discovery",
-    descricao:
-      "Mapeamento de problemas, definição de personas e priorização de oportunidades com base em dados reais.",
+      "Construção de bibliotecas de componentes escaláveis que garantem consistência e aceleram a entrega do time de desenvolvimento.",
   },
 ]
 
 const experiencias = [
   {
     empresa: "RockFly Performance",
-    cargo: "Designer UX/UI",
+    cargo: "Product Designer",
     periodo: "mar 2024 – jan 2026",
   },
   {
@@ -166,11 +166,11 @@ export default function SobreModal() {
                       margin: 0,
                     }}
                   >
-                    Sou Product Designer com mais de 4 anos de experiência projetando produtos digitais em
-                    ecossistemas de e-commerce e SaaS. Ao longo da minha trajetória, trabalhei com plataformas
-                    como VTEX, Shopify e Nuvemshop, resolvendo problemas complexos com decisões intencionais e
-                    atenção à experiência do usuário. O que me move é a conexão entre pesquisa, interface e
-                    resultado real.
+                    Product Designer com 4+ anos projetando e-commerce e SaaS. Reduzi 25%
+                    o tempo de conclusão em fluxos críticos e alcancei 90% de sucesso em
+                    testes de usabilidade. Trabalhei em VTEX, Shopify, Nuvemshop, Tray,
+                    Wake e Magazord — sempre operando end-to-end: discovery, pesquisa,
+                    prototipagem e handoff para engenharia.
                   </p>
                 </div>
 
